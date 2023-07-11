@@ -1,42 +1,147 @@
-import React from 'react';
-import '../styles/nav.css';
+import React from "react";
+import { Link } from 'react-router-dom';
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
 
-const styles = {
-    navStyle: {
-        background: '#353535',
-    },
+import {
+  chakra,
+  Box,
+  Flex,
+  useColorModeValue,
+  VisuallyHidden,
+  HStack,
+  Button,
+  useDisclosure,
+  VStack,
+  IconButton,
+  CloseButton,
+  Avatar,
+} from "@chakra-ui/react";
+import {
+  AiOutlineMenu,
+  AiFillHome,
+  AiOutlineMail
+} from "react-icons/ai";
+import { BsFillArchiveFill } from "react-icons/bs";
+import { GrDocumentPdf } from "react-icons/gr";
+
+export default function App(){
+  // const bg = useColorModeValue("#FFFFFF", "#353535");
+  const mobileNav = useDisclosure();
+
+  return (
+    <React.Fragment>
+      <chakra.header
+        // bg={bg}
+        bg={['brandTheme.500']}
+        w="full"
+        px={{ base: 2, sm: 4 }}
+        py={4}
+        shadow="md"
+      >
+        <Flex alignItems="center" justifyContent="space-between" mx="auto">
+          {/* Start of Mobile Hamburger menu */}
+          <HStack display="flex" spacing={3} alignItems="center">
+            <Box display={{ base: "inline-flex", md: "none" }}>
+              <IconButton
+                display={{ base: "flex", md: "none" }}
+                aria-label="Open menu"
+                fontSize="20px"
+                color="gray.800"
+                _dark={{ color: "inherit" }}
+                variant="ghost"
+                icon={<AiOutlineMenu />}
+                onClick={mobileNav.onOpen}
+              />
+              <VStack
+                pos="absolute"
+                top={0}
+                left={0}
+                right={0}
+                display={mobileNav.isOpen ? "flex" : "none"}
+                flexDirection="column"
+                p={2}
+                pb={4}
+                m={2}
+                bg={['brandTheme.500']}
+                spacing={3}
+                rounded="sm"
+                shadow="sm"
+              >
+                <CloseButton
+                  aria-label="Close menu"
+                  justifySelf="self-start"
+                  onClick={mobileNav.onClose}
+                />
+                <Button w="full" variant="ghost" leftIcon={<AiFillHome />}>
+                  Home
+                </Button>
+                <Button
+                  w="full"
+                  variant="ghost"
+                  leftIcon={<BsFillArchiveFill />}
+                >
+                  Videos
+                </Button>
+              </VStack>
+            </Box>
+            <chakra.a
+              href="/"
+              title="Choc Home Page"
+              display="flex"
+              alignItems="center"
+            >
+              <VisuallyHidden>Choc</VisuallyHidden>
+            </chakra.a>
+        {/* End of Mobile Hamburger menu */}
+
+        {/* Start of desktop nav view */}
+            <HStack spacing={3} display={{ base: "none", md: "inline-flex" }}>
+            <Avatar
+              size="md"
+              name="Brian Hamlin"
+              src="https://avatars.githubusercontent.com/u/40344045?v=4"
+            />
+            <Link to={'/'}>
+            <Button variant="ghost" leftIcon={<AiFillHome />} size="lg">
+                Home
+              </Button>
+            </Link>
+            <Link to={'/project'}>
+            <Button variant="ghost" leftIcon={<BsFillArchiveFill />} size="lg">
+                Projects
+              </Button>
+            </Link>
+            <Link to={'/resume'}>
+            <Button variant="ghost" leftIcon={<GrDocumentPdf />} size="lg">
+                Resume
+              </Button>
+            </Link>
+            </HStack>
+          </HStack>
+          <HStack
+            spacing={3}
+            display={mobileNav.isOpen ? "none" : "flex"}
+            alignItems="center"
+          >
+            <Link to={'/contact'}>
+              <Button variant="outline" leftIcon={<AiOutlineMail />}>
+                Contact
+              </Button>
+            </Link>
+
+            <chakra.a
+              p={3}
+              color="gray.800"
+              _dark={{ color: "inherit" }}
+              rounded="sm"
+              _hover={{ color: "gray.800", _dark: { color: "gray.600" } }}
+            >
+            </chakra.a>
+            {/* End of desktop nav view */}
+
+          </HStack>
+        </Flex>
+      </chakra.header>
+    </React.Fragment>
+  );
 };
-
-function Nav() {
-    return (
-        <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-  <div class="flex items-center flex-shrink-0 text-white mr-6">
-    <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-    <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-  </div>
-  <div class="block lg:hidden">
-    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-    </button>
-  </div>
-  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-    <div class="text-sm lg:flex-grow">
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Docs
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Examples
-      </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-        Blog
-      </a>
-    </div>
-    <div>
-      <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
-    </div>
-  </div>
-</nav>
-    )
-}
-
-export default Nav;
