@@ -10,18 +10,18 @@ const colors = {
     },
 };
 
-export const customTheme = extendTheme(
-    withDefaultColorScheme({
-        colorScheme: '#FFFFFF',
-        components: ['Button'],
-    }),
-)
+// export const customTheme = extendTheme(
+//     withDefaultColorScheme({
+//         colorScheme: '#FFFFFF',
+//         components: ['Button'],
+//     }),
+// )
 
-const config = {
-    initialColorMode: 'dark',
-    useSystemColorMode: false,
-}
+// const config = {
+//     initialColorMode: 'dark',
+//     useSystemColorMode: false,
+// }
 
-const brandTheme = extendTheme({ colors, config });
+const brandTheme = extendTheme({ colors });
 
 export default brandTheme;
