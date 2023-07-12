@@ -7,7 +7,12 @@ import { GrMysql } from 'react-icons/gr';
 
 export default function Homepage() {
   return (
-    <Container maxW="90%" my="7">
+    <Container 
+    maxW="90%" 
+    my="7"
+    // To account for fixed footer, 10px above
+    pb={{ base: '116px' }}
+    >
       <Center>
         <Text className="animate__animated animate__wobble" fontSize='4xl' my='4'>
           A little bit about me...
@@ -38,9 +43,6 @@ export default function Homepage() {
         sector. It is an intensive 12 week program that covers full
         stack development focused on the MERN stack.
       </Box>
-      {/* <Center className='animate__animated animate__fadeInDownBig animate__delay-1s' fontSize='2xl' mb='3'>
-        Topics learned:
-      </Center> */}
       <Center className='animate__animated animate__fadeInUpBig animate__delay-1s' fontSize='2xl'>
         <List>
           <ListItem>

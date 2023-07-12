@@ -33,7 +33,12 @@ export default function Contact() {
         size="sm"
       />
 
-      <Button colorScheme="blue">Submit</Button>
+      <Button
+        bg='brandTheme.500'
+        color='brandTheme.700'
+      >
+        Submit
+      </Button>
     </FormControl>
   );
 }

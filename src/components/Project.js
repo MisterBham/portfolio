@@ -16,7 +16,7 @@ export default function Project(){
     w: "auto",
     mt: "-22px",
     p: "16px",
-    color: "white",
+    color: 'brandTheme.700',
     fontWeight: "bold",
     fontSize: "18px",
     transition: "0.6s ease",
@@ -24,7 +24,7 @@ export default function Project(){
     userSelect: "none",
     _hover: {
       opacity: 0.8,
-      bg: "black",
+      bg: 'brandTheme.500',
     },
   };
 
@@ -111,12 +111,9 @@ export default function Project(){
   }, [slidesCount]);  
 
   return (
-    <Container maxW="75%" my="7">
+    <Container maxW={{ base: "100%", md: '85%' }} my="10">
       <Flex
-      w="full"
-      bg="#edf3f8"
-      _dark={{ bg: "#3e3e3e" }}
-      p={10}
+      w={'full'}
       alignItems="center"
       justifyContent="center"
     >
