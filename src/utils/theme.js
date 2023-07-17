@@ -1,4 +1,4 @@
-import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 
 const colors = {       
     brandTheme: {
@@ -9,6 +9,11 @@ const colors = {
         500: "#284B63",
     },
 };
+
+// const config = {
+//     initialColorMode: 'dark',
+//     useSystemColorMode: false,
+// };
 
 // export const customTheme = extendTheme(
 //     withDefaultColorScheme({

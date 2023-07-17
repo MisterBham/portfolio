@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Container, Box, Flex, HStack, Image, Stack, Text, Link } from "@chakra-ui/react";
-import dude from '../images/dude-wheres-my-show.png';
-import fusionfables from '../images/fusion-fables.png';
-import pwa from '../images/progressive-web-app.jpg';
-import nosql from '../images/nosql.jpg';
-import regex from '../images/regex-gist.jpg';
-import techblog from '../images/tech-blog-home.png';
-import ecombackend from '../images/ecom-backend.jpg';
+import dude from '../assets/images/dude-wheres-my-show.png';
+import fusionfables from '../assets/images/fusion-fables.png';
+import pwa from '../assets/images/progressive-web-app.jpg';
+import nosql from '../assets/images/nosql.jpg';
+import regex from '../assets/images/regex-gist.jpg';
+import techblog from '../assets/images/tech-blog-home.png';
+import ecombackend from '../assets/images/ecom-backend.jpg';
+import expressnotetaker from '../assets/images/express-noteTaker.jpg';
 
 export default function Project(){
   const arrowStyles = {
@@ -30,16 +31,16 @@ export default function Project(){
 
   const slides = [
     {
+      img: fusionfables,
+      label: "Fusion Fables",
+      description: "JavaScript / Handlebars",
+      href: "https://github.com/HunterHester/fusion-fables",
+    },
+    {
       img: dude,
       label: "Dude, where's my show?",
       description: "JavaScript / Materialize",
       href: "https://eeast.github.io/Dude-Wheres-My-Show/",
-    },
-    {
-      img: fusionfables,
-      label: "Fusion Fables",
-      description: "JavaScript / Handlebars",
-      href: "http://www.fusionfables.com/",
     },
     {
       img: pwa,
@@ -51,26 +52,32 @@ export default function Project(){
       img: nosql,
       label: "Social Network API",
       description: "NodeJS / ExpressJS / MongoDB / Mongoose",
-      href: "#",
+      href: "https://github.com/MisterBham/socialnetwork-api",
     },
     {
       img: regex,
       label: "RegEx Gist",
       description:
         "Gist article covering RegEx",
-      href: "#",
+      href: "https://gist.github.com/MisterBham/5fe51b1d14b839bebd82a1fadb62ee37",
     },
     {
       img: techblog,
       label: "MVC Tech Blog",
       description: "NodeJS / ExpressJS / mySQL / Sequelize",
-      href: "#",
+      href: "https://github.com/MisterBham/tech-blog",
     },
     {
       img: ecombackend,
       label: "E-commerce Backend",
       description: "NodeJS / ExpressJS / mySQL / Sequelize",
-      href: "#",
+      href: "https://github.com/MisterBham/ecom-backend",
+    },
+    {
+      img: expressnotetaker,
+      label: "Express Note Taker",
+      description: "JavaScript / ExpressJS",
+      href: "https://github.com/MisterBham/express-noteTaker",
     },
   ];
 
@@ -130,8 +137,8 @@ export default function Project(){
               >
                 {sid + 1} / {slidesCount}
               </Text>
-              <Link href={slide.href}>
-                <Image
+              <Link href={slide.href} target="_blank" rel="noreferrer">
+              <Image
                   src={slide.img}
                   alt="carousel image of development projects"
                   boxSize="full"
@@ -146,9 +153,19 @@ export default function Project(){
                 w="full"
                 mb="8"
                 color="white"
+                alignItems="center"
+                justifyContent="center"
               >
-                <Text fontSize="2xl">{slide.label}</Text>
-                <Text fontSize="lg">{slide.description}</Text>
+                <Box 
+                bg='brandTheme.800'
+                maxW='max-content'
+                p={3}
+                borderRadius='20px'
+                >
+                  <Text color="brandTheme.700" fontSize="2xl">{slide.label}</Text>
+                  <Text color="brandTheme.700" fontSize="lg">{slide.description}</Text>
+                </Box>
+                
               </Stack>
             </Box>
           ))}
@@ -166,11 +183,11 @@ export default function Project(){
               cursor="pointer"
               boxSize={["7px", null, "15px"]}
               m="0 2px"
-              bg={currentSlide === slide ? "blackAlpha.800" : "blackAlpha.500"}
+              bg={currentSlide === slide ? "brandTheme.800" : "brandTheme.600"}
               rounded="50%"
               display="inline-block"
               transition="background-color 0.6s ease"
-              _hover={{ bg: "blackAlpha.800" }}
+              _hover={{ bg: "brandTheme.500" }}
               onClick={() => setSlide(slide)}
             ></Box>
           ))}
