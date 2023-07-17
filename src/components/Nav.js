@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   chakra,
   Box,
   Flex,
-  VisuallyHidden,
   HStack,
   Button,
   useDisclosure,
@@ -12,12 +11,11 @@ import {
   IconButton,
   CloseButton,
   Avatar,
-  background,
 } from "@chakra-ui/react";
 import {
   AiOutlineMenu,
   AiFillHome,
-  AiOutlineMail
+  AiOutlineMail,
 } from "react-icons/ai";
 import { BsFillArchiveFill } from "react-icons/bs";
 import { GrDocumentPdf } from "react-icons/gr";
@@ -187,6 +185,7 @@ export default function App(){
             display={mobileNav.isOpen ? "none" : "flex"}
             alignItems="center"
           >
+
             <Link to={'/contact'}>
               <Button 
                 variant="outline" 
