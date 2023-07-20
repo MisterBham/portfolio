@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import 'animate.css';
-import { Container, Box, Center, Text, List, ListItem, ListIcon, Flex, Image, AspectRatio } from '@chakra-ui/react';
+import React from 'react';
+import { Container, Box, Center, Text, List, ListItem, ListIcon, Flex } from '@chakra-ui/react';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiExpress, SiSequelize, SiMongodb, SiMongoose, SiJavascript, SiJquery } from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+import 'animate.css';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import '../components/Homepage.css';
 
 import image1 from '../assets/images/personal/IMG_2734.jpg';
 import image2 from '../assets/images/personal/IMG_3966.jpg';
@@ -13,53 +19,6 @@ import image5 from '../assets/images/personal/IMG_4777.jpg';
 import image6 from '../assets/images/personal/IMG_3082.jpg';
 
 export default function Homepage() {
-  const slides = [
-    {
-      img: image1,
-    },
-    {
-      img: image2,
-    },
-    {
-      img: image3,
-    },
-    {
-      img: image4,
-    },
-    {
-      img: image5,
-    },
-    {
-      img: image6,
-    },
-  ];
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slidesCount = slides.length;
-
-  const carouselStyle = {
-    transition: "all .5s",
-    ml: `-${currentSlide * 100}%`,
-  };
-
-  const SLIDES_INTERVAL_TIME = 3000;
-  const ANIMATION_DIRECTION = "right";
-
-  useEffect(() => {
-    const prevSlide = () => {
-      setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
-    };
-
-    const nextSlide = () => {
-      setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
-    };
-
-    const automatedSlide = setInterval(() => {
-      ANIMATION_DIRECTION.toLowerCase() === "left" ? prevSlide() : nextSlide();
-    }, SLIDES_INTERVAL_TIME);
-    return () => clearInterval(automatedSlide);
-  }, [slidesCount]);
-
   return (
     <>
 
@@ -69,41 +28,45 @@ export default function Homepage() {
     // To account for fixed footer, 10px above
     pb={{base:'25%', sm:'10%'}}
     >
-      <Flex
-        bg="#edf3f8"
-        _dark={{ bg: "#3e3e3e" }}
-        p='2.5%'
-        alignItems="center"
-        justifyContent="center"
-        overflow="hidden"
-        h='350px'
-        w='auto'
+<Flex 
+  w='full'
+  h='350px'>
+<Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
       >
-        <Flex 
-          overflow="hidden" 
-          backgroundSize='cover' 
-          w='35%'
-          h='full'
-          >
-          <Flex 
-            pos="relative" 
-            w="full" 
-            h='full'
-            {...carouselStyle}
-            >
-            {slides.map((slide, sid) => (
-              <Box key={`slide-${sid}`} flex="none" boxSize="full" shadow="md">
-                <Image
-                  src={slide.img}
-                  alt="carousel of personal images"
-                  w="full" 
-                  h='full'
-                />
-              </Box>
-            ))}
-          </Flex>
-        </Flex>
-      </Flex>
+        <SwiperSlide>
+          <img src={image1} alt='Brian and Family' />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img src={image2} alt='Brian and Family' />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img src={image3} alt='Brian and Family' />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img src={image4} alt='Brian and Family' />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img src={image5} alt='Brian and Family' />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img src={image6} alt='Brian and Family' />
+        </SwiperSlide>
+      </Swiper>
+</Flex>
 
 
 
@@ -120,14 +83,13 @@ export default function Homepage() {
         mined a fair bit of cryptocurrency. I regularly stay up with tech news
         and have worked in technology in some shape or form for over 8 years
         now. I am currently employed as a network infrastructure technician
-        where I am actively implementing a project surrounding SDWAN and a spine-leaf architecture being deployed throughout a large enterprise environment for a client out of Houston, TX. I also support the existing infrastructure, scaled at roughly ~15,000 access
+        where I am actively working a multi-million dollar investment surrounding SDWAN implmenetation and a migrating network architecture to a spine-leaf architecture being deployed throughout a large enterprise environment for a client out of Spring, TX. I also provide overall support the existing infrastructure, scaled at roughly ~15,000 access
         points, ~600 network switches, and ~100 network routers.
       </Box>
       <Box mb='3'>
         I have found that as my career with technology has grown, I have been
         exposed to numerous different types of command line interfaces, which I found a love for. After dabbling and learning at my own pace for many years, I am proud to say that I am now a student of University of Texas at Austin software engineering
-        bootcamp, to further my current knowledge and gain entrance into the development
-        sector. It is an intensive 12 week program that covers full
+        bootcamp, to further my current knowledge and progress in my development track. It is an intensive 12 week program that covers full
         stack development focused on the MERN stack.
       </Box>
       <Box mb='3'>
