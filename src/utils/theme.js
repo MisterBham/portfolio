@@ -10,23 +10,6 @@ const colors = {
     },
 };
 
-// const config = {
-//     initialColorMode: 'dark',
-//     useSystemColorMode: false,
-// };
-
-// export const customTheme = extendTheme(
-//     withDefaultColorScheme({
-//         colorScheme: '#FFFFFF',
-//         components: ['Button'],
-//     }),
-// )
-
-// const config = {
-//     initialColorMode: 'dark',
-//     useSystemColorMode: false,
-// }
-
 const brandTheme = extendTheme({ colors });
 
 export default brandTheme;

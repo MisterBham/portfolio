@@ -40,6 +40,8 @@ export default function Contact() {
         type='text'
         placeholder="e.g. Sarah Kensington" 
         mb='5'
+        focusBorderColor='teal'
+        border='1px solid silver'
         />
 
       <FormLabel>Email address</FormLabel>
@@ -47,6 +49,8 @@ export default function Contact() {
         name='email' 
         type="email" 
         placeholder="e.g. skensington@outlook.com"
+        focusBorderColor='teal'
+        border='1px solid silver'
         />
       <FormHelperText 
         fontSize='0.75em' 
@@ -61,6 +65,8 @@ export default function Contact() {
         placeholder="Hey Brian, I'd like to get into contact with you..."
         size="sm"
         mb='5'
+        focusBorderColor='teal'
+        border='1px solid silver'
       />
 
       <Button
@@ -84,7 +90,3 @@ export default function Contact() {
 </Container>
   );
 }
-
-// const btnSubmit = () => {
-
-// }
