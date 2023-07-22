@@ -76,19 +76,21 @@ export default function Homepage() {
         </Text>
       </Center>
       <Box mb='3'>
+
+      </Box>
+
+
+      <Box mb='3'>
         I describe myself as somewhat of a tech enthusiast. I enjoy most
-        everything with regard to technology. I've built many computers over the
-        years, setup media rooms for family members, installed and configured
-        security systems with camera feeds accessible remotely, and have even
+        everything with regard to technology. I've built many computers, written web applications and have even
         mined a fair bit of cryptocurrency. I regularly stay up with tech news
-        and have worked in technology in some shape or form for over 8 years
-        now. I am currently employed as a network infrastructure technician
-        where I am actively working a multi-million dollar investment surrounding SDWAN implmenetation and a migrating network architecture to a spine-leaf architecture being deployed throughout a large enterprise environment for a client out of Spring, TX. I also provide overall support the existing infrastructure, scaled at roughly ~15,000 access
+        and have worked in technology in some shape or form for over 8 years. Currently, I hold the position of Network Infrastructure Technician
+        where I am actively working a dynamic project involving a substantial multi-million dollar investment surrounding SDWAN implmenetation and migrating network architecture to that of a spine-leaf architecture being deployed throughout a large enterprise environment for a client out of Spring, TX. Additionally, I provide overall support the existing infrastructure, scaled at roughly ~15,000 access
         points, ~600 network switches, and ~100 network routers.
       </Box>
       <Box mb='3'>
         I have found that as my career with technology has grown, I have been
-        exposed to numerous different types of command line interfaces, which I found a love for. After dabbling and learning at my own pace for many years, I am proud to say that I am now a student of University of Texas at Austin software engineering
+        exposed to numerous different types of command line interfaces, which I found a love for. After dabbling and learning at my own pace for many years, I am proud to say that I am nearing graduation as a student of University of Texas at Austin software engineering
         bootcamp, to further my current knowledge and progress in my development track. It is an intensive 12 week program that covers full
         stack development focused on the MERN stack.
       </Box>
