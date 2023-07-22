@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AspectRatio, Center, Container } from '@chakra-ui/react';
+import { AspectRatio } from '@chakra-ui/react';
 import resume from '../assets/Hamlin-Brian-resume.pdf';
 
 function Resume() {
