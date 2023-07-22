@@ -20,7 +20,7 @@ Presenting various applications built as a collection, for the purposes of showc
 Made with <a href="https://create-react-app.dev/">create-react-app</a>, styled with <a href="https://chakra-ui.com/">Chakra UI</a>, with some animation and functionality incorporated from <a href="https://animate.style/">Animate.css</a> and <a href="https://www.emailjs.com/">EmailJS</a>, respectively . Site is fully mobile responsive. 
 
 ### Usage
-Link to live application: {Place Link Here}
+Link to live application: https://misterbham.github.io/portfolio/
 
 ### License
 Further information regarding this specific license can be found via: https://opensource.org/license/mit/. <br>
