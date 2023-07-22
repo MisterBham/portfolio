@@ -5,11 +5,11 @@ import Homepage from "./components/Homepage";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
