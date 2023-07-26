@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.5462ec00.css",
-    "main.js": "/portfolio/static/js/main.16b335d7.js",
+    "main.js": "/portfolio/static/js/main.f777583e.js",
     "static/media/IMG_3966.jpg": "/portfolio/static/media/IMG_3966.bf65a993e63b9c3070c1.jpg",
     "static/media/IMG_4777.jpg": "/portfolio/static/media/IMG_4777.9c4a106d380d8f88406d.jpg",
     "static/media/IMG_2734.jpg": "/portfolio/static/media/IMG_2734.d840166cbdc10e54d513.jpg",
@@ -15,14 +15,15 @@
     "static/media/tech-blog-home.png": "/portfolio/static/media/tech-blog-home.c38f8f25aa472813af91.png",
     "static/media/nosql.jpg": "/portfolio/static/media/nosql.f3228a98e1d3f109c52a.jpg",
     "static/media/ecom-backend.jpg": "/portfolio/static/media/ecom-backend.c772b840c5184eb33cef.jpg",
+    "static/media/schedaddy.jpg": "/portfolio/static/media/schedaddy.199168e344a54b1d739d.jpg",
     "static/media/express-noteTaker.jpg": "/portfolio/static/media/express-noteTaker.6f33d10cfdca2f6cc5d8.jpg",
     "static/media/progressive-web-app.jpg": "/portfolio/static/media/progressive-web-app.77ecfc942477e9f1da16.jpg",
     "index.html": "/portfolio/index.html",
     "main.5462ec00.css.map": "/portfolio/static/css/main.5462ec00.css.map",
-    "main.16b335d7.js.map": "/portfolio/static/js/main.16b335d7.js.map"
+    "main.f777583e.js.map": "/portfolio/static/js/main.f777583e.js.map"
   },
   "entrypoints": [
     "static/css/main.5462ec00.css",
-    "static/js/main.16b335d7.js"
+    "static/js/main.f777583e.js"
   ]
 }
