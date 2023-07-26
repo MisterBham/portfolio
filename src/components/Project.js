@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Box, Flex, HStack, Image, Stack, Text, Link } from "@chakra-ui/react";
 import dude from '../assets/images/dude-wheres-my-show.png';
 import fusionfables from '../assets/images/fusion-fables.png';
+import schedaddy from '../assets/images/schedaddy.jpg';
 import pwa from '../assets/images/progressive-web-app.jpg';
 import nosql from '../assets/images/nosql.jpg';
 import regex from '../assets/images/regex-gist.jpg';
@@ -30,6 +31,12 @@ export default function Project(){
   };
 
   const slides = [
+    {
+      img: schedaddy,
+      label: "Schedaddy",
+      description: "MERN stack",
+      href: "https://github.com/cmcnamara15/Schedaddy",
+    },
     {
       img: fusionfables,
       label: "Fusion Fables",
