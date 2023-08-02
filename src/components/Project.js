@@ -22,12 +22,13 @@ import ecombackend from '../assets/images/ecom-backend.jpg';
 import expressnotetaker from '../assets/images/express-noteTaker.jpg';
 
 export default function Project(){
-  const slides = [
+  const projects = [
     {
       img: schedaddy,
       label: "Schedaddy",
       alt: "Schedaddy screenshot",
       description: "CRM style application for streamlining company scheduling.",
+      stack: "MERN",
       source: "https://github.com/cmcnamara15/Schedaddy",
       app: "https://schedaddy-0dffdc6ab2cd.herokuapp.com/",
     },
@@ -35,7 +36,8 @@ export default function Project(){
       img: fusionfables,
       label: "Fusion Fables",
       alt: "Fusion Fables screenshot",
-      description: "JavaScript / Handlebars",
+      description: 'Application styled as a writing enthusiast blog. "To harness the fusion of collaboration and community"',
+      stack: "JavaScript / Handlebars",
       source: "https://github.com/HunterHester/fusion-fables",
       app: "http://www.fusionfables.com/",
     },
@@ -43,7 +45,8 @@ export default function Project(){
       img: dude,
       label: "Dude, where's my show?",
       alt: "Dude, where's my show screenshot",
-      description: "JavaScript / Materialize",
+      description: 'Client-side web application for searching streaming availability and information of movies and tv shows.',
+      stack: "JavaScript / Materialize",
       source: "https://github.com/MisterBham/Dude-Wheres-My-Show",
       app: "https://eeast.github.io/Dude-Wheres-My-Show/",
     },
@@ -51,16 +54,35 @@ export default function Project(){
       img: pwa,
       label: "Progressive Web App",
       alt: "JATE text editor screenshot",
-      description: "JavaScript / ExpressJS",
+      description: 'PWA concept expressed as an offline text editor',
+      stack: "JavaScript / ExpressJS",
       source: "https://github.com/MisterBham/PWA-texteditor",
       app: "https://jate-texteditor-8463ed25bde3.herokuapp.com/",
+    },
+    {
+      img: techblog,
+      label: "MVC Tech Blog",
+      alt: "MVC Tech Blog screenshot",
+      description: 'Blogging application paired with MySQL back-end',
+      stack: "Handlebars / NodeJS / ExpressJS / MySQL / Sequelize",
+      source: "https://github.com/MisterBham/tech-blog",
+      app: "https://technologyblog.herokuapp.com/",
     },
     {
       img: nosql,
       label: "Social Network API",
       alt: "Social network API screenshot",
-      description: "NodeJS / ExpressJS / MongoDB / Mongoose",
+      description: 'Back-end MongoDB API setup for a social network type front-end',
+      stack: "NodeJS / ExpressJS / MongoDB / Mongoose",
       source: "https://github.com/MisterBham/socialnetwork-api",
+    },
+    {
+      img: ecombackend,
+      label: "E-commerce Backend",
+      alt: "Ecom backend screenshot",
+      description: 'Back-end MySQL API setup for an e-commerce type front-end',
+      stack: "NodeJS / ExpressJS / MySQL / Sequelize",
+      source: "https://github.com/MisterBham/ecom-backend",
     },
     {
       img: regex,
@@ -68,104 +90,72 @@ export default function Project(){
       alt: "RegEx Gist article screenshot",
       description:
         "Gist article covering RegEx",
+        stack: "RegEx",
       source: "https://gist.github.com/MisterBham/5fe51b1d14b839bebd82a1fadb62ee37",
-    },
-    {
-      img: techblog,
-      label: "MVC Tech Blog",
-      alt: "MVC Tech Blog screenshot",
-      description: "NodeJS / ExpressJS / mySQL / Sequelize",
-      source: "https://github.com/MisterBham/tech-blog",
-      app: "https://technologyblog.herokuapp.com/",
-    },
-    {
-      img: ecombackend,
-      label: "E-commerce Backend",
-      alt: "Ecom backend screenshot",
-      description: "NodeJS / ExpressJS / mySQL / Sequelize",
-      source: "https://github.com/MisterBham/ecom-backend",
     },
     {
       img: expressnotetaker,
       label: "Express Note Taker",
       alt: "Express note taker screenshot",
-      description: "JavaScript / ExpressJS",
+      description: 'Note taking application',
+      stack: "JavaScript / ExpressJS",
       source: "https://github.com/MisterBham/express-noteTaker",
       app: "https://xpress-notetaker.herokuapp.com/",
     },
   ];
 
+
   return (
     <>
-    <Box pb={{ base: '30%', md: '9%' }}>
-    {slides.map((slide) => (
+    <Box pb={{ base: '5rem', md: '8rem' }}>
+    {projects.map((project, index) => (
       <Card
       direction={{ base: 'column', md: 'row' }}
       overflow='hidden'
       variant='outline'
-      pt={{ base: '2rem', md: '5rem' }}
-      px={{ base: '1rem', md: '4rem' }}
-      width='full'
+      mt={{ base: '2rem', md: '4rem' }}
+      mx={{ base: '1rem', md: '4rem' }}
     >
+
       <Image
         objectFit='cover'
         width={{ base: '100%', md: '35%' }}
-        src={slide.img}
-        alt='Schedaddy website screenshot' 
+        src={project.img}
+        alt={project.alt}
+        // Don't want this to occur on mobile. 
+        // onMouseEnter={(e) => { e.target.style.width = '55%' }}
+        // onMouseOut={(e) => { e.target.style.width = '35%' }}
       />
 
-      <Center 
-        width={{ base: '100%', md: '65%' }}
-        textAlign='center'
-        >
+      <Center width={{ base: '100%', md: '65%' }} textAlign='center'>
         <CardBody paddingBottom='1' verticalAlign='center'>
-          <Heading size='md'>{slide.label}</Heading>
-
-          <Text py='2'>
-            {slide.description}
+          <Heading size='md'>
+            {project.label}
+          </Heading>
+          <Text pt='2rem'>
+            {project.description}
           </Text>
-          <Link 
-          href={slide.source} 
-          target='_blank' 
-          isExternal
-          >
-            <Button 
-              variant='outline' 
-              color='brandTheme.700' 
-              bg='brandTheme.500' 
-              _hover={{
-                bg: 'brandTheme.800',
-                color: 'brandTheme.700',
-                }}
-              margin='1'
-            >
-              {`\<Source /\>`}
+          <Text>
+          {project.stack}
+          </Text>
+          <Link href={project.source} target='_blank' isExternal>
+            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
+              {`<Source />`}
             </Button>
           </Link>
-          <Link
-            href={slide.app}
-            target='_blank' 
-            isExternal
-          >
-            <Button 
-              variant='outline' 
-              color='brandTheme.700' 
-              bg='brandTheme.500' 
-              _hover={{
-                bg: 'brandTheme.800',
-                color: 'brandTheme.700',
-                }}
-              margin='1'
-            >
+          {project.app ? (        
+            <Link href={project.app} target='_blank' isExternal>
+            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
               Application
             </Button>
-          </Link>
+            </Link>
+            ) : ('')
+          }
         </CardBody>
       </Center>
     </Card>
-   ))}
-
-   </Box>
+    ))}
+    </Box>
       </>
   );
 };
