@@ -1,5 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Container, Box, Flex, HStack, Image, Stack, Text, Link } from "@chakra-ui/react";
+import React from "react";
+import { 
+  Box,
+  Center,
+  Image, 
+  Text, 
+  Link,
+  Button,
+  Card, 
+  CardBody, 
+  Heading,
+} from "@chakra-ui/react";
+
 import dude from '../assets/images/dude-wheres-my-show.png';
 import fusionfables from '../assets/images/fusion-fables.png';
 import schedaddy from '../assets/images/schedaddy.jpg';
@@ -11,196 +22,140 @@ import ecombackend from '../assets/images/ecom-backend.jpg';
 import expressnotetaker from '../assets/images/express-noteTaker.jpg';
 
 export default function Project(){
-  const arrowStyles = {
-    cursor: "pointer",
-    pos: "absolute",
-    top: "50%",
-    w: "auto",
-    mt: "-22px",
-    p: "16px",
-    color: 'brandTheme.700',
-    fontWeight: "bold",
-    fontSize: "18px",
-    transition: "0.6s ease",
-    borderRadius: "0 3px 3px 0",
-    userSelect: "none",
-    _hover: {
-      opacity: 0.8,
-      bg: 'brandTheme.500',
-    },
-  };
-
-  const slides = [
+  const projects = [
     {
       img: schedaddy,
       label: "Schedaddy",
-      description: "MERN stack",
-      href: "https://github.com/cmcnamara15/Schedaddy",
+      alt: "Schedaddy screenshot",
+      description: "CRM style application for streamlining company scheduling.",
+      stack: "MERN",
+      source: "https://github.com/cmcnamara15/Schedaddy",
+      app: "https://schedaddy-0dffdc6ab2cd.herokuapp.com/",
     },
     {
       img: fusionfables,
       label: "Fusion Fables",
-      description: "JavaScript / Handlebars",
-      href: "https://github.com/HunterHester/fusion-fables",
+      alt: "Fusion Fables screenshot",
+      description: 'Application styled as a writing enthusiast blog. "To harness the fusion of collaboration and community"',
+      stack: "JavaScript / Handlebars",
+      source: "https://github.com/HunterHester/fusion-fables",
+      app: "http://www.fusionfables.com/",
     },
     {
       img: dude,
       label: "Dude, where's my show?",
-      description: "JavaScript / Materialize",
-      href: "https://eeast.github.io/Dude-Wheres-My-Show/",
+      alt: "Dude, where's my show screenshot",
+      description: 'Client-side web application for searching streaming availability and information of movies and tv shows.',
+      stack: "JavaScript / Materialize",
+      source: "https://github.com/MisterBham/Dude-Wheres-My-Show",
+      app: "https://eeast.github.io/Dude-Wheres-My-Show/",
     },
     {
       img: pwa,
       label: "Progressive Web App",
-      description: "JavaScript / ExpressJS",
-      href: "https://github.com/MisterBham/PWA-texteditor",
-    },
-    {
-      img: nosql,
-      label: "Social Network API",
-      description: "NodeJS / ExpressJS / MongoDB / Mongoose",
-      href: "https://github.com/MisterBham/socialnetwork-api",
-    },
-    {
-      img: regex,
-      label: "RegEx Gist",
-      description:
-        "Gist article covering RegEx",
-      href: "https://gist.github.com/MisterBham/5fe51b1d14b839bebd82a1fadb62ee37",
+      alt: "JATE text editor screenshot",
+      description: 'PWA concept expressed as an offline text editor',
+      stack: "JavaScript / ExpressJS",
+      source: "https://github.com/MisterBham/PWA-texteditor",
+      app: "https://jate-texteditor-8463ed25bde3.herokuapp.com/",
     },
     {
       img: techblog,
       label: "MVC Tech Blog",
-      description: "NodeJS / ExpressJS / mySQL / Sequelize",
-      href: "https://github.com/MisterBham/tech-blog",
+      alt: "MVC Tech Blog screenshot",
+      description: 'Blogging application paired with MySQL back-end',
+      stack: "Handlebars / NodeJS / ExpressJS / MySQL / Sequelize",
+      source: "https://github.com/MisterBham/tech-blog",
+      app: "https://technologyblog.herokuapp.com/",
+    },
+    {
+      img: nosql,
+      label: "Social Network API",
+      alt: "Social network API screenshot",
+      description: 'Back-end MongoDB API setup for a social network type front-end',
+      stack: "NodeJS / ExpressJS / MongoDB / Mongoose",
+      source: "https://github.com/MisterBham/socialnetwork-api",
     },
     {
       img: ecombackend,
       label: "E-commerce Backend",
-      description: "NodeJS / ExpressJS / mySQL / Sequelize",
-      href: "https://github.com/MisterBham/ecom-backend",
+      alt: "Ecom backend screenshot",
+      description: 'Back-end MySQL API setup for an e-commerce type front-end',
+      stack: "NodeJS / ExpressJS / MySQL / Sequelize",
+      source: "https://github.com/MisterBham/ecom-backend",
+    },
+    {
+      img: regex,
+      label: "RegEx Gist",
+      alt: "RegEx Gist article screenshot",
+      description:
+        "Gist article covering RegEx",
+        stack: "RegEx",
+      source: "https://gist.github.com/MisterBham/5fe51b1d14b839bebd82a1fadb62ee37",
     },
     {
       img: expressnotetaker,
       label: "Express Note Taker",
-      description: "JavaScript / ExpressJS",
-      href: "https://github.com/MisterBham/express-noteTaker",
+      alt: "Express note taker screenshot",
+      description: 'Note taking application',
+      stack: "JavaScript / ExpressJS",
+      source: "https://github.com/MisterBham/express-noteTaker",
+      app: "https://xpress-notetaker.herokuapp.com/",
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slidesCount = slides.length;
-
-  const prevSlide = () => {
-    setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
-  };
-  const nextSlide = () => {
-    setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
-  };
-  const setSlide = (slide: number) => {
-    setCurrentSlide(slide);
-  };
-  const carouselStyle = {
-    transition: "all .5s",
-    ml: `-${currentSlide * 100}%`,
-  };
-  const SLIDES_INTERVAL_TIME = 3500;
-  const ANIMATION_DIRECTION = "right";
-
-
-  useEffect(() => {
-    const prevSlide = () => {
-      setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
-    };
-
-    const nextSlide = () => {
-      setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
-    };
-
-    const automatedSlide = setInterval(() => {
-      ANIMATION_DIRECTION.toLowerCase() === "left" ? prevSlide() : nextSlide();
-    }, SLIDES_INTERVAL_TIME);
-    return () => clearInterval(automatedSlide);
-  }, [slidesCount]);  
 
   return (
-    <Container maxW={{ base: "100%", md: '85%' }} my="10">
-      <Flex
-      w={'full'}
-      alignItems="center"
-      justifyContent="center"
+    <>
+    <Box pb={{ base: '5rem', md: '8rem' }}>
+    {projects.map((project, index) => (
+      <Card
+      direction={{ base: 'column', md: 'row' }}
+      overflow='hidden'
+      variant='outline'
+      mt={{ base: '2rem', md: '4rem' }}
+      mx={{ base: '1rem', md: '4rem' }}
     >
-      <Flex w="full" pos="relative" overflow="hidden">
-        <Flex h="xl" w="full" {...carouselStyle}>
-          {slides.map((slide, sid) => (
-            <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
-              <Text
-                color="white"
-                fontSize="md"
-                p="8px 12px"
-                pos="absolute"
-                top="0"
-              >
-                {sid + 1} / {slidesCount}
-              </Text>
-              <Link href={slide.href} target="_blank" rel="noreferrer">
-              <Image
-                  src={slide.img}
-                  alt="carousel image of development projects"
-                  boxSize="full"
-                  backgroundSize="cover"
-                />
-              </Link>
-              <Stack
-                p="8px 12px"
-                pos="absolute"
-                bottom="24px"
-                textAlign="center"
-                w="full"
-                mb="8"
-                color="white"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Box 
-                bg='brandTheme.800'
-                maxW='max-content'
-                p={3}
-                borderRadius='20px'
-                >
-                  <Text color="brandTheme.700" fontSize="2xl">{slide.label}</Text>
-                  <Text color="brandTheme.700" fontSize="lg">{slide.description}</Text>
-                </Box>
-                
-              </Stack>
-            </Box>
-          ))}
-        </Flex>
-        <Text {...arrowStyles} left="0" onClick={prevSlide}>
-          &#10094;
-        </Text>
-        <Text {...arrowStyles} right="0" onClick={nextSlide}>
-          &#10095;
-        </Text>
-        <HStack justify="center" pos="absolute" bottom="8px" w="full">
-          {Array.from({ length: slidesCount }).map((_, slide) => (
-            <Box
-              key={`dots-${slide}`}
-              cursor="pointer"
-              boxSize={["7px", null, "15px"]}
-              m="0 2px"
-              bg={currentSlide === slide ? "brandTheme.800" : "brandTheme.600"}
-              rounded="50%"
-              display="inline-block"
-              transition="background-color 0.6s ease"
-              _hover={{ bg: "brandTheme.500" }}
-              onClick={() => setSlide(slide)}
-            ></Box>
-          ))}
-        </HStack>
-      </Flex>
-    </Flex>
-    </Container>
+
+      <Image
+        objectFit='cover'
+        width={{ base: '100%', md: '35%' }}
+        src={project.img}
+        alt={project.alt}
+        // Don't want this to occur on mobile. 
+        // onMouseEnter={(e) => { e.target.style.width = '55%' }}
+        // onMouseOut={(e) => { e.target.style.width = '35%' }}
+      />
+
+      <Center width={{ base: '100%', md: '65%' }} textAlign='center'>
+        <CardBody paddingBottom='1' verticalAlign='center'>
+          <Heading size='md'>
+            {project.label}
+          </Heading>
+          <Text pt='2rem'>
+            {project.description}
+          </Text>
+          <Text>
+          {project.stack}
+          </Text>
+          <Link href={project.source} target='_blank' isExternal>
+            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
+              {`<Source />`}
+            </Button>
+          </Link>
+          {project.app ? (        
+            <Link href={project.app} target='_blank' isExternal>
+            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
+              Application
+            </Button>
+            </Link>
+            ) : ('')
+          }
+        </CardBody>
+      </Center>
+    </Card>
+    ))}
+    </Box>
+      </>
   );
 };
