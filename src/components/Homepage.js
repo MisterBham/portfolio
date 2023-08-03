@@ -76,13 +76,13 @@ export default function Homepage() {
         </Text>
       </Center>
       <Box mb='3'>
-        I'm a tech enthusiast with a passion for all things technology. I've built numerous computers, developed web applications, and even mined cryptocurrency. With over 8 years of experience in the tech industry, I've worn many hats, but currently working as a Network Infrastructure Technician. My focus is on a dynamic project that involves a significant multi-million dollar investment in SDWAN implementation and the transition to a spine-leaf network architecture. Additionally, I provide comprehensive support for the existing infrastructure, scaled at roughly ~15,000 access points, ~600 network switches, and ~100 network routers.
+        I'm a tech enthusiast with a passion for all things technology. I've built several computers, developed web applications, and even mined a fair bit of cryptocurrency. With over 8 years of experience in the tech industry, I've worn many hats, but currently working as a Network Infrastructure Technician. My focus is on a dynamic project that involves a significant multi-million dollar investment in SDWAN implementation and the transition to a spine-leaf network architecture. Additionally, I provide comprehensive support for the existing infrastructure, scaled at roughly ~15,000 access points, ~600 network switches, and ~100 network routers.
       </Box>
       <Box mb='3'> 
-        As my career in technology has progressed, I've encountered various command line interfaces and discovered a genuine interest for them. To increase upon to self-guided learning for several years, I'm excited to share that I will soon be graduating the University of Texas at Austin software engineering bootcamp. Which is an intensive 12-week program focuses on full-stack development, particularly the MERN stack. 
+        As my career in technology has progressed, I've encountered numerous command line interfaces and discovered a genuine interest for them. To increase upon to self-guided learning for multiple years, I'm excited to share that I have recently graduated the University of Texas at Austin software engineering bootcamp. Which was an intensive 12-week program that focuses on full-stack development, particularly the MERN stack. I am immensely excited to start contributing to enterprise applications and create future technical solutions!
       </Box>
       <Box mb='3'>
-        In my personal life, I am happily married and blessed with two wonderful kids who keep me busy. Though late nights and early mornings are the norm now, I cherish every moment spent with my family. Whenever I get some free time, I indulge in a relaxing round of playing golf, savoring a large macchiato, or enjoying some delicious southern tex-mex!
+        In my personal life, I am happily married and blessed with two wonderful kids who keep me busy. Though late nights and early mornings are the norm now, I cherish every moment spent with my family. Whenever I get some free time, I indulge in a relaxing round of golf, savoring a large macchiato, or enjoying some delicious southern tex-mex cuisine!
       </Box>
       <Center className='animate__animated animate__fadeInUpBig animate__delay-1s' fontSize='2xl'>
         <List>
