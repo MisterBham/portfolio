@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.5462ec00.css",
-    "main.js": "/portfolio/static/js/main.c02e839b.js",
+    "main.js": "/portfolio/static/js/main.82355b59.js",
     "static/media/IMG_3966.jpg": "/portfolio/static/media/IMG_3966.bf65a993e63b9c3070c1.jpg",
     "static/media/IMG_4777.jpg": "/portfolio/static/media/IMG_4777.9c4a106d380d8f88406d.jpg",
+    "static/media/Hamlin_Brian_Resume_Online.pdf": "/portfolio/static/media/Hamlin_Brian_Resume_Online.c5ca338a4b53610cf18d.pdf",
     "static/media/IMG_2734.jpg": "/portfolio/static/media/IMG_2734.d840166cbdc10e54d513.jpg",
     "static/media/IMG_4679.jpg": "/portfolio/static/media/IMG_4679.4fa7c8e6896f455f6fcb.jpg",
     "static/media/IMG_4558.jpg": "/portfolio/static/media/IMG_4558.56e66f90dcd0ea1ce1b5.jpg",
     "static/media/fusion-fables.png": "/portfolio/static/media/fusion-fables.098ffedadf4b5f581940.png",
     "static/media/IMG_3082.jpg": "/portfolio/static/media/IMG_3082.e806bab531b9e8b90b27.jpg",
-    "static/media/Hamlin-Brian-resume-online.pdf": "/portfolio/static/media/Hamlin-Brian-resume-online.f7b38bb190a7ce0c26bd.pdf",
     "static/media/dude-wheres-my-show.png": "/portfolio/static/media/dude-wheres-my-show.2a5e3527d76a588c2c34.png",
     "static/media/regex-gist.jpg": "/portfolio/static/media/regex-gist.5c3034cf75962389f435.jpg",
     "static/media/tech-blog-home.png": "/portfolio/static/media/tech-blog-home.c38f8f25aa472813af91.png",
@@ -20,10 +20,10 @@
     "static/media/progressive-web-app.jpg": "/portfolio/static/media/progressive-web-app.77ecfc942477e9f1da16.jpg",
     "index.html": "/portfolio/index.html",
     "main.5462ec00.css.map": "/portfolio/static/css/main.5462ec00.css.map",
-    "main.c02e839b.js.map": "/portfolio/static/js/main.c02e839b.js.map"
+    "main.82355b59.js.map": "/portfolio/static/js/main.82355b59.js.map"
   },
   "entrypoints": [
     "static/css/main.5462ec00.css",
-    "static/js/main.c02e839b.js"
+    "static/js/main.82355b59.js"
   ]
 }
