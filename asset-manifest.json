@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/www.brianhamlin.dev/static/css/main.5462ec00.css",
-    "main.js": "/www.brianhamlin.dev/static/js/main.18a9558a.js",
-    "static/media/IMG_3966.jpg": "/www.brianhamlin.dev/static/media/IMG_3966.bf65a993e63b9c3070c1.jpg",
-    "static/media/IMG_4777.jpg": "/www.brianhamlin.dev/static/media/IMG_4777.9c4a106d380d8f88406d.jpg",
-    "static/media/Hamlin_Brian_Resume_Online.pdf": "/www.brianhamlin.dev/static/media/Hamlin_Brian_Resume_Online.c5ca338a4b53610cf18d.pdf",
-    "static/media/IMG_2734.jpg": "/www.brianhamlin.dev/static/media/IMG_2734.d840166cbdc10e54d513.jpg",
-    "static/media/IMG_4679.jpg": "/www.brianhamlin.dev/static/media/IMG_4679.4fa7c8e6896f455f6fcb.jpg",
-    "static/media/IMG_4558.jpg": "/www.brianhamlin.dev/static/media/IMG_4558.56e66f90dcd0ea1ce1b5.jpg",
-    "static/media/fusion-fables.png": "/www.brianhamlin.dev/static/media/fusion-fables.098ffedadf4b5f581940.png",
-    "static/media/IMG_3082.jpg": "/www.brianhamlin.dev/static/media/IMG_3082.e806bab531b9e8b90b27.jpg",
-    "static/media/dude-wheres-my-show.png": "/www.brianhamlin.dev/static/media/dude-wheres-my-show.2a5e3527d76a588c2c34.png",
-    "static/media/regex-gist.jpg": "/www.brianhamlin.dev/static/media/regex-gist.5c3034cf75962389f435.jpg",
-    "static/media/tech-blog-home.png": "/www.brianhamlin.dev/static/media/tech-blog-home.c38f8f25aa472813af91.png",
-    "static/media/nosql.jpg": "/www.brianhamlin.dev/static/media/nosql.f3228a98e1d3f109c52a.jpg",
-    "static/media/ecom-backend.jpg": "/www.brianhamlin.dev/static/media/ecom-backend.c772b840c5184eb33cef.jpg",
-    "static/media/schedaddy.jpg": "/www.brianhamlin.dev/static/media/schedaddy.199168e344a54b1d739d.jpg",
-    "static/media/express-noteTaker.jpg": "/www.brianhamlin.dev/static/media/express-noteTaker.6f33d10cfdca2f6cc5d8.jpg",
-    "static/media/progressive-web-app.jpg": "/www.brianhamlin.dev/static/media/progressive-web-app.77ecfc942477e9f1da16.jpg",
-    "index.html": "/www.brianhamlin.dev/index.html",
-    "main.5462ec00.css.map": "/www.brianhamlin.dev/static/css/main.5462ec00.css.map",
-    "main.18a9558a.js.map": "/www.brianhamlin.dev/static/js/main.18a9558a.js.map"
+    "main.css": "/static/css/main.5462ec00.css",
+    "main.js": "/static/js/main.dcc7b0d4.js",
+    "static/media/IMG_3966.jpg": "/static/media/IMG_3966.bf65a993e63b9c3070c1.jpg",
+    "static/media/IMG_4777.jpg": "/static/media/IMG_4777.9c4a106d380d8f88406d.jpg",
+    "static/media/Hamlin_Brian_Resume_Online.pdf": "/static/media/Hamlin_Brian_Resume_Online.c5ca338a4b53610cf18d.pdf",
+    "static/media/IMG_2734.jpg": "/static/media/IMG_2734.d840166cbdc10e54d513.jpg",
+    "static/media/IMG_4679.jpg": "/static/media/IMG_4679.4fa7c8e6896f455f6fcb.jpg",
+    "static/media/IMG_4558.jpg": "/static/media/IMG_4558.56e66f90dcd0ea1ce1b5.jpg",
+    "static/media/fusion-fables.png": "/static/media/fusion-fables.098ffedadf4b5f581940.png",
+    "static/media/IMG_3082.jpg": "/static/media/IMG_3082.e806bab531b9e8b90b27.jpg",
+    "static/media/dude-wheres-my-show.png": "/static/media/dude-wheres-my-show.2a5e3527d76a588c2c34.png",
+    "static/media/regex-gist.jpg": "/static/media/regex-gist.5c3034cf75962389f435.jpg",
+    "static/media/tech-blog-home.png": "/static/media/tech-blog-home.c38f8f25aa472813af91.png",
+    "static/media/nosql.jpg": "/static/media/nosql.f3228a98e1d3f109c52a.jpg",
+    "static/media/ecom-backend.jpg": "/static/media/ecom-backend.c772b840c5184eb33cef.jpg",
+    "static/media/schedaddy.jpg": "/static/media/schedaddy.199168e344a54b1d739d.jpg",
+    "static/media/express-noteTaker.jpg": "/static/media/express-noteTaker.6f33d10cfdca2f6cc5d8.jpg",
+    "static/media/progressive-web-app.jpg": "/static/media/progressive-web-app.77ecfc942477e9f1da16.jpg",
+    "index.html": "/index.html",
+    "main.5462ec00.css.map": "/static/css/main.5462ec00.css.map",
+    "main.dcc7b0d4.js.map": "/static/js/main.dcc7b0d4.js.map"
   },
   "entrypoints": [
     "static/css/main.5462ec00.css",
-    "static/js/main.18a9558a.js"
+    "static/js/main.dcc7b0d4.js"
   ]
 }
