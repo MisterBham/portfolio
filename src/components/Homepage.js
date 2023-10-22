@@ -76,10 +76,10 @@ export default function Homepage() {
         </Text>
       </Center>
       <Box mb='3'>
-        I'm a tech enthusiast with a passion for all things technology. I've built several computers, developed web applications, and even mined a fair bit of cryptocurrency. With over 8 years of experience in the tech industry, I've worn many hats, but currently working as a Network Infrastructure Technician. Focusing on implementation of SD-WAN and the transition to a spine-leaf network architecture. Additionally, I provide comprehensive support for the existing campus infrastructure, scaled at roughly ~15,000 access points, ~600 network switches, and ~100 network routers.
+        I'm a tech enthusiast with a passion for all things technology. I've built several computers, developed web applications, and even mined a fair bit of cryptocurrency. With over 8 years of experience in the tech industry, I've worn many hats, but currently working as a Network Infrastructure Technician. Focusing on implementation of SD-WAN functionality and the transition to a spine-leaf network architecture. Additionally, I provide comprehensive support for the existing campus infrastructure, scaled at roughly ~5,000 access points, ~225 network switches, and ~20 network routers.
       </Box>
       <Box mb='3'> 
-        As my career in technology has progressed, I've encountered numerous command line interfaces and discovered a genuine fascination for them. Amplifying multiple years of self-guided learning, I'm excited to share that I have recently graduated the University of Texas at Austin software engineering bootcamp. Which was an accelerated 12-week program focusing on full-stack development, particularly the MERN stack. I am immensely excited to start contributing to enterprise applications and create future technical solutions!
+        As my career in technology has progressed, I've encountered numerous command line interfaces and discovered a genuine fascination for them, prompting me to delve deeper into the realm of software development. Amplifying multiple years of self-guided learning, I'm excited to share that I have recently graduated the University of Texas at Austin software engineering bootcamp, where I explored the intricacies of the MERN stack and gained comprehensive insights into full-stack development. I am immensely excited to start contributing to enterprise applications and create future technical solutions!
       </Box>
       <Center className='animate__animated animate__fadeInUpBig animate__delay-1s' fontSize='2xl'>
         <List>
