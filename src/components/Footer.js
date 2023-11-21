@@ -7,7 +7,7 @@ export default function Footer() {
         w="full"
         bg='brandTheme.600'
         _dark={{ bg: 'brandTheme.900' }}
-        p={{ base: "4", md: "6" }}
+        p='3'
         alignItems="center"
         justifyContent="center"
         left={0}

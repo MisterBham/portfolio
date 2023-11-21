@@ -10,11 +10,8 @@ import { VscTerminalCmd } from "react-icons/vsc";
 function Skills() {
   return (
     <>
-
-    <Container maxW="90%" my="7"
-    // To account for fixed footer, 10px above
-    pb={{base:'25%', sm:'10%'}}>
-      <Center className='animate__animated animate__fadeInUpBig animate__delay-1s' fontSize='xl'>
+    <Container maxW="90%" my="7">
+      <Center className='animate__animated animate__fadeInUpBig' fontSize='xl'>
         <VStack spacing={3}>
           {/* Dev Skills Section */}
           <VStack spacing={0} align='stretch'>
@@ -76,12 +73,12 @@ function Skills() {
             </Flex>
             <Flex>
               CLI:
-              <Box ml='3' mr='1'><VscTerminalCmd /></Box>
-              <Box mr='1'>CMD</Box>
-              <Box ml='3' mr='1'><SiPowershell /></Box>
-              <Box mr='1'>PowerShell</Box>
               <Box ml='3' mr='1'><SiGnubash /></Box>
               <Box mr='1'>Bash</Box>
+              <Box ml='3' mr='1'><SiPowershell /></Box>
+              <Box mr='1'>PowerShell</Box>
+              <Box ml='3' mr='1'><VscTerminalCmd /></Box>
+              <Box mr='1'>CMD</Box>
             </Flex>
           </VStack>
           {/* Tech Skills Section */}
@@ -89,10 +86,7 @@ function Skills() {
           <Center fontSize='1.50rem' my='2' as='u'>Technical Skills:</Center>
           <Flex>
             Operating System:
-            <Box ml='3' mr='1'>Windows</Box>
-            <Box ml='3' mr='1'>MacOS</Box>
-            <Box ml='3' mr='1'>Linux</Box>
-            <Box ml='3' mr='1'>iOS</Box>
+            <Box ml='3' mr='1'>Windows / MacOS / Linux / iOS</Box>
           </Flex>
           <Flex>
             Environment:
@@ -115,17 +109,11 @@ function Skills() {
           </Flex>
           <Flex>
             CLI:
-              <Box ml='3' mr='1'>CMD</Box>
-              <Box ml='3' mr='1'>PowerShell</Box>
-              <Box ml='3' mr='1'>Cisco IOS</Box>
-              <Box ml='3' mr='1'>Junos OS</Box>
+              <Box ml='3' mr='1'>CMD / PowerShell / Cisco IOS / Junos OS</Box>
           </Flex>
           <Flex>
             Certifications:
-              <Box ml='3' mr='1'>Net+</Box>
-              <Box ml='3' mr='1'>A+</Box>
-              <Box ml='3' mr='1'>MCP Infrastructure</Box>
-              <Box ml='3' mr='1'>Dell Warranty Certified</Box>
+              <Box ml='3' mr='1'>Net+ / A+ / MCP Infrastructure / Dell Warranty Certified</Box>
           </Flex>
           </VStack>
         </VStack>

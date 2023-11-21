@@ -1,24 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  chakra,
-  Box,
-  Flex,
-  HStack,
-  Button,
-  useDisclosure,
-  VStack,
-  IconButton,
-  CloseButton,
-  Avatar,
-} from "@chakra-ui/react";
-import {
-  AiOutlineMenu,
-  AiFillHome,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar } from "@chakra-ui/react";
+import { AiOutlineMenu, AiFillHome, AiOutlineMail } from "react-icons/ai";
 import { BsFillArchiveFill } from "react-icons/bs";
 import { GrDocumentPdf } from "react-icons/gr";
+import { FaCog } from "react-icons/fa";
 
 export default function App(){
   const mobileNav = useDisclosure();
@@ -160,10 +146,10 @@ export default function App(){
                 Projects
               </Button>
             </Link>
-            <Link to={'/resume'}>
+            <Link to={'/skills'}>
             <Button 
             variant="ghost" 
-            leftIcon={<GrDocumentPdf />} 
+            leftIcon={<FaCog />} 
             size="lg"
             _hover={{
               bg: 'brandTheme.800',
@@ -174,7 +160,7 @@ export default function App(){
                 _hover: { color: 'brandTheme.700' },
             }}
             >
-                Resume
+                Skills
               </Button>
             </Link>
             </HStack>
