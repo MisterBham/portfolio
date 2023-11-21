@@ -11,21 +11,20 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import '../components/Homepage.css';
 
-import image1 from '../assets/images/personal/IMG_2734.jpg';
-import image2 from '../assets/images/personal/IMG_3966.jpg';
-import image3 from '../assets/images/personal/IMG_4558.jpg';
-import image4 from '../assets/images/personal/IMG_4679.jpg';
-import image5 from '../assets/images/personal/IMG_4777.jpg';
-import image6 from '../assets/images/personal/IMG_3082.jpg';
+import image1 from '../assets/images/personal/new/IMG_3135.jpg';
+import image2 from '../assets/images/personal/new/IMG_1854.jpg';
+import image3 from '../assets/images/personal/new/IMG_0563.jpg';
+import image4 from '../assets/images/personal/new/CJNY8798.jpg';
+import image5 from '../assets/images/personal/new/UZTD2692.jpg';
+import image6 from '../assets/images/personal/new/IMG_0526.jpg';
+import image7 from '../assets/images/personal/new/IMG_3610.jpg';
 
 export default function Homepage() {
   return (
     <>
-
     <Container 
     maxW="90%" 
     my="7"
-    // To account for fixed footer, 10px above
     pb={{base:'25%', sm:'10%'}}
     >
 <Flex 
@@ -65,10 +64,11 @@ export default function Homepage() {
         <SwiperSlide>
         <img src={image6} alt='Brian and Family' />
         </SwiperSlide>
+        <SwiperSlide>
+        <img src={image7} alt='Brian and Family' />
+        </SwiperSlide>
       </Swiper>
 </Flex>
-
-
 
       <Center>
         <Text className="animate__animated animate__wobble" fontSize='4xl' my='4'>
@@ -81,46 +81,6 @@ export default function Homepage() {
       <Box mb='3'> 
         As my career in technology has progressed, I've encountered numerous command line interfaces and discovered a genuine fascination for them, prompting me to delve deeper into the realm of software development. Amplifying multiple years of self-guided learning, I'm excited to share that I have recently graduated the University of Texas at Austin software engineering bootcamp, where I explored the intricacies of the MERN stack and gained comprehensive insights into full-stack development. I am immensely excited to start contributing to enterprise applications and create future technical solutions!
       </Box>
-      <Center className='animate__animated animate__fadeInUpBig animate__delay-1s' fontSize='2xl'>
-        <List>
-          <ListItem>
-            <ListIcon as={FaReact} />
-            React.js
-          </ListItem>
-          <ListItem>
-            <ListIcon as={FaNodeJs} />
-            Node.js
-          </ListItem>
-          <ListItem>
-            <ListIcon as={SiExpress} />
-            Express.js
-          </ListItem>
-          <ListItem>
-            <ListIcon as={SiJavascript} />
-            JavaScript
-          </ListItem>
-          <ListItem>
-            <ListIcon as={SiJquery} />
-            jQuery
-          </ListItem>
-          <ListItem>
-            <ListIcon as={GrMysql} />
-            MySQL
-          </ListItem>
-          <ListItem>
-            <ListIcon as={SiSequelize} />
-            Sequelize
-          </ListItem>
-          <ListItem>
-            <ListIcon as={SiMongodb} />
-            MongoDB
-          </ListItem>
-          <ListItem>
-            <ListIcon as={SiMongoose} />
-            Mongoose
-          </ListItem>
-        </List>
-      </Center>
     </Container>
     </>
   );

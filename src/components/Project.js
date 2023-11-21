@@ -104,7 +104,6 @@ export default function Project(){
     },
   ];
 
-
   return (
     <>
     <Box pb={{ base: '5rem', md: '8rem' }}>
