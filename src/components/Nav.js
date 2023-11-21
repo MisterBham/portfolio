@@ -39,7 +39,7 @@ export default function App(){
                 right={0}
                 zIndex={999}
                 display={mobileNav.isOpen ? "flex" : "none"}
-                flexDirection="column-reverse"
+                flexDirection="column"
                 p={2}
                 pb={2}
                 m={2}
@@ -85,10 +85,10 @@ export default function App(){
                     Projects
                   </Button>
                 </Link>
-                <Link to={'/resume'}>
+                <Link to={'/skills'}>
                   <Button 
                   variant="ghost" 
-                  leftIcon={<GrDocumentPdf />}
+                  leftIcon={<FaCog />}
                   _hover={{
                     bg: 'brandTheme.800',
                     color: 'brandTheme.700',
@@ -98,7 +98,7 @@ export default function App(){
                       _hover: { color: 'brandTheme.700' },
                   }}
                   >
-                    Resume
+                    Skills
                   </Button>
                 </Link>
               </VStack>
