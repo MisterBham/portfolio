@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Box, Container, Center, Flex, VStack, Stack, Wrap, WrapItem, Text } from '@chakra-ui/react';
-import { SiExpress, SiSequelize, SiMongodb, SiMongoose, SiJavascript, SiJquery, SiNetlify, SiPowershell, SiGnubash } from 'react-icons/si';
+import { Box, Card, Container, Center, Link, VStack, Stack, Wrap, WrapItem, Text } from '@chakra-ui/react';
+import { SiExpress, SiSequelize, SiMongodb, SiMongoose, SiJavascript, SiNetlify, SiPowershell, SiGnubash } from 'react-icons/si';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGitAlt, FaGithub} from 'react-icons/fa';
 import { LuFileJson2 } from "react-icons/lu";
 import { BsFiletypeXml } from "react-icons/bs";
@@ -10,8 +10,8 @@ import { VscTerminalCmd } from "react-icons/vsc";
 function Skills() {
   return (
     <>
-    <Container maxW="90%" maxH="85%" overflow='scroll'>
-      <Center className='animate__animated animate__fadeInUpBig' fontSize={{base:'md', md:'xl'}}>
+    <Container maxW="90%" maxH="85%" pb='12' overflow='scroll'>
+      <Center className='animate__animated animate__fadeInUpBig' fontSize={{base:'md', md:'lg'}}>
         <VStack spacing={3}>
           {/* Dev Skills Section */}
           <Stack spacing={0} align='stretch' textAlign={{base:'center', md:'start'}}>
@@ -20,7 +20,7 @@ function Skills() {
                 <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} mt={{base:'1', md:'0'}}>Front-end:</Text>
                 <WrapItem>
                   <Box ml='3' mr='1'><FaReact /></Box>
-                  <Box mr='1'>React.js</Box>
+                  <Box mr='1'>React</Box>
                 </WrapItem>
                 <WrapItem>
                   <Box ml='3' mr='1'><SiJavascript /></Box>
@@ -122,7 +122,7 @@ function Skills() {
             </Wrap>
           </Stack>
           {/* Tech Skills Section */}
-          <Stack spacing={0} align='stretch' pb='12' textAlign={{base:'center', md:'start'}} mb={{base:'7', md:'auto'}}>
+          <Stack spacing={0} align='stretch' textAlign={{base:'center', md:'start'}}>
           <Center fontSize='1.50rem' mt='2' mb='1' as='b' textTransform='uppercase' color='brandTheme.800'>Technical:</Center>
           <Wrap justify={{base:'center', md:'start'}} spacing='0'>
             <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'start'}} mt={{base:'1', md:'0'}}>Operating System:</Text>
@@ -156,6 +156,10 @@ function Skills() {
               <Box ml={{base:'0', md:'3'}} mr='1'>Net+ / A+ / MCP Infrastructure / Dell Warranty Certified</Box>
           </Wrap>
           </Stack>
+          <Card textAlign='center' variant='outline' p='3' m='2' bg='rgba(60, 110, 113, 0.2)' color='brandTheme.500'>
+            {/*   */}
+            <Text as='b'>Resume available upon request, simply use the embedded <Link href={'#/contact'}>Contact</Link> form to reach me!</Text>
+          </Card>
         </VStack>
       </Center>
     </Container>     

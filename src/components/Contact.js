@@ -7,6 +7,7 @@ import {
   FormHelperText,
   Input,
   Textarea,
+  Link
 } from "@chakra-ui/react";
 import emailjs from '@emailjs/browser';
 
@@ -51,13 +52,8 @@ export default function Contact() {
         placeholder="e.g. skensington@outlook.com"
         focusBorderColor='teal'
         border='1px solid silver'
-        />
-      <FormHelperText 
-        fontSize='0.75em' 
         mb='5'
-        >
-          Your email will never be shared.
-      </FormHelperText>
+        />
 
       <FormLabel>Message</FormLabel>
       <Textarea
@@ -74,6 +70,7 @@ export default function Contact() {
         value='Send'
         bg='brandTheme.800'
         color='brandTheme.700'
+        mb='1'
         _hover={{
           bg: 'brandTheme.500',
           color: 'brandTheme.700',
@@ -85,6 +82,14 @@ export default function Contact() {
       >
         Submit
       </Button>
+
+      <FormHelperText 
+        fontSize='0.75em' 
+        >
+          <hr />
+          Your email and message are protected behind private API keys. <br />
+          For more information regarding the functionality of EmailJS, please visit <Link href='https://www.emailjs.com/' isExternal target="_blank" aria-label="EmailJS">https://www.emailjs.com/</Link>
+      </FormHelperText>
     </FormControl>
   </form>
 </Container>
