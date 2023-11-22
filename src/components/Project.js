@@ -106,12 +106,13 @@ export default function Project(){
 
   return (
     <>
-    <Box pb={{ base: '5rem', md: '8rem' }}>
+    <Box pb={{ base: '5rem', md: '8rem' }} fontSize={{base:'md', md:'lg'}}>
     {projects.map((project, index) => (
       <Card
       direction={{ base: 'column', md: 'row' }}
       overflow='hidden'
       variant='outline'
+      bg='rgba(60, 110, 113, 0.15)'
       mt={{ base: '2rem', md: '4rem' }}
       mx={{ base: '1rem', md: '4rem' }}
     >
@@ -128,23 +129,23 @@ export default function Project(){
 
       <Center width={{ base: '100%', md: '65%' }} textAlign='center'>
         <CardBody paddingBottom='1' verticalAlign='center'>
-          <Heading size='md'>
+          <Heading size='md' color='brandTheme.500' as='u'>
             {project.label}
           </Heading>
-          <Text pt='2rem'>
+          <Text pt='1rem'>
             {project.description}
           </Text>
           <Text>
           {project.stack}
           </Text>
           <Link href={project.source} target='_blank' isExternal>
-            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
+            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.500', color: 'brandTheme.700'}} margin='1'>
               {`<Source />`}
             </Button>
           </Link>
           {project.app ? (        
             <Link href={project.app} target='_blank' isExternal>
-            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
+            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.500', color: 'brandTheme.700'}} margin='1'>
               Application
             </Button>
             </Link>

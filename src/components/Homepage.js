@@ -1,10 +1,7 @@
 import React from 'react';
-import { Container, Box, Center, Text, List, ListItem, ListIcon, Flex } from '@chakra-ui/react';
-import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiExpress, SiSequelize, SiMongodb, SiMongoose, SiJavascript, SiJquery } from 'react-icons/si';
-import { GrMysql } from 'react-icons/gr';
+import { Container, Box, Center, Text, Flex } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import 'animate.css';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -26,6 +23,8 @@ export default function Homepage() {
     maxW="90%" 
     my="7"
     pb={{base:'25%', sm:'10%'}}
+    fontSize={{base:'md', md:'lg'}}
+    textAlign={{base:'center', md:'start'}}
     >
 <Flex 
   w='full'
@@ -34,6 +33,10 @@ export default function Homepage() {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         slidesPerView={'auto'}
         coverflowEffect={{
           rotate: 50,
@@ -43,7 +46,7 @@ export default function Homepage() {
           slideShadows: true,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>

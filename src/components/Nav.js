@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar } from "@chakra-ui/react";
 import { AiOutlineMenu, AiFillHome, AiOutlineMail } from "react-icons/ai";
 import { BsFillArchiveFill } from "react-icons/bs";
-import { GrDocumentPdf } from "react-icons/gr";
 import { FaCog } from "react-icons/fa";
 
 export default function App(){
@@ -57,6 +56,7 @@ export default function App(){
                   <Button 
                   variant="ghost" 
                   leftIcon={<AiFillHome />}
+                  onClick={mobileNav.onClose}
                   _hover={{
                     bg: 'brandTheme.800',
                     color: 'brandTheme.700',
@@ -73,6 +73,7 @@ export default function App(){
                   <Button 
                   variant="ghost" 
                   leftIcon={<BsFillArchiveFill />}
+                  onClick={mobileNav.onClose}
                   _hover={{
                     bg: 'brandTheme.800',
                     color: 'brandTheme.700',
@@ -89,6 +90,7 @@ export default function App(){
                   <Button 
                   variant="ghost" 
                   leftIcon={<FaCog />}
+                  onClick={mobileNav.onClose}
                   _hover={{
                     bg: 'brandTheme.800',
                     color: 'brandTheme.700',
