@@ -76,8 +76,9 @@ export default function Contact() {
           color: 'brandTheme.700',
           }}
         _dark={{
-            color: 'brandTheme.600',
-            _hover: { color: 'brandTheme.700' },
+          bg: 'theme.brandTheme.600',
+          color: 'brandTheme.600',
+          _hover: { color: 'brandTheme.700' },
         }}
       >
         Submit
