@@ -1,21 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar } from "@chakra-ui/react";
+import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar, Switch, Stack, useColorMode } from "@chakra-ui/react";
 import { AiOutlineMenu, AiFillHome, AiOutlineMail } from "react-icons/ai";
 import { BsFillArchiveFill } from "react-icons/bs";
 import { FaCog } from "react-icons/fa";
+import { FiSun } from "react-icons/fi";
+import { IoMoonOutline } from "react-icons/io5";
 
 export default function App(){
   const mobileNav = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <React.Fragment>
       <chakra.header
-        bg='brandTheme.600'
+        bg="colors.600"
         w="full"
         px={{ base: 2, sm: 4 }}
         py={4}
         shadow="md"
+        _dark={{
+          bg: 'brandTheme.900'
+      }}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <HStack display="flex" spacing={2} alignItems="center">
@@ -173,6 +179,14 @@ export default function App(){
             display={mobileNav.isOpen ? "none" : "flex"}
             alignItems="center"
           >
+
+            <Stack align='center' direction='row'>
+              <FiSun />
+              <Switch size='md' colorScheme='orange' onClick={toggleColorMode}>
+              </Switch>
+              <IoMoonOutline />
+            </Stack>
+
 
             <Link to={'/contact'}>
               <Button 
