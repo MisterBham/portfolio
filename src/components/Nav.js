@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar, Switch, Stack, useColorMode } from "@chakra-ui/react";
+import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar, Stack, useColorMode } from "@chakra-ui/react";
 import { AiOutlineMenu, AiFillHome, AiOutlineMail } from "react-icons/ai";
 import { BsFillArchiveFill } from "react-icons/bs";
 import { FaCog } from "react-icons/fa";
-import { FiSun } from "react-icons/fi";
-import { IoMoonOutline } from "react-icons/io5";
+import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 
 export default function App(){
   const mobileNav = useDisclosure();
@@ -14,8 +13,8 @@ export default function App(){
   return (
     <React.Fragment>
       <chakra.header
-        bg="colors.600"
-        w="full"
+        bg='theme.colors.600'
+        w='full'
         px={{ base: 2, sm: 4 }}
         py={4}
         shadow="md"
@@ -181,10 +180,12 @@ export default function App(){
           >
 
             <Stack align='center' direction='row'>
-              <FiSun />
-              <Switch size='md' colorScheme='orange' onClick={toggleColorMode}>
-              </Switch>
-              <IoMoonOutline />
+              <Button
+              onClick={() => toggleColorMode()}
+              m='inherit'
+              >
+                {colorMode === 'dark' ? <SunIcon color='orange.200'/> : <MoonIcon color='blue.600'/>}
+              </Button>
             </Stack>
 
 
