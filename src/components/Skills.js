@@ -156,8 +156,18 @@ function Skills() {
               <Box ml={{base:'0', md:'3'}} mr='1'>Net+ / A+ / MCP Infrastructure / Dell Warranty Certified</Box>
           </Wrap>
           </Stack>
-          <Card textAlign='center' variant='outline' p='3' m='2' bg='rgba(60, 110, 113, 0.2)' color='brandTheme.800'>
-            {/*   */}
+          <Card 
+          textAlign='center' 
+          variant='outline' 
+          p='3' 
+          m='2' 
+          bg='rgba(60, 110, 113, 0.2)' 
+          color='brandTheme.800'
+          _dark={{ 
+            bg:'rgba(85, 85, 85, 0.2)',
+            color: 'brandTheme.800'
+          }}
+          >
             <Text as='b'>Resume available upon request, simply use the embedded <Link href={'#/contact'}>Contact</Link> form to reach me!</Text>
           </Card>
         </VStack>

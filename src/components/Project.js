@@ -109,6 +109,7 @@ export default function Project(){
     <Box pb={{ base: '5rem', md: '8rem' }} fontSize={{base:'md', md:'lg'}}>
     {projects.map((project, index) => (
       <Card
+      key={project.label}
       direction={{ base: 'column', md: 'row' }}
       overflow='hidden'
       variant='outline'

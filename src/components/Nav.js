@@ -1,21 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar } from "@chakra-ui/react";
+import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar, Stack, useColorMode } from "@chakra-ui/react";
 import { AiOutlineMenu, AiFillHome, AiOutlineMail } from "react-icons/ai";
 import { BsFillArchiveFill } from "react-icons/bs";
 import { FaCog } from "react-icons/fa";
+import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 
 export default function App(){
   const mobileNav = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <React.Fragment>
       <chakra.header
         bg='brandTheme.600'
-        w="full"
+        w='full'
         px={{ base: 2, sm: 4 }}
         py={4}
         shadow="md"
+        _dark={{
+          bg: 'brandTheme.900'
+      }}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <HStack display="flex" spacing={2} alignItems="center">
@@ -42,7 +47,7 @@ export default function App(){
                 p={2}
                 pb={2}
                 m={2}
-                bg='brandTheme.600'
+                bg='brandTheme.900'
                 spacing={1}
                 rounded="sm"
                 shadow="sm"
@@ -105,7 +110,7 @@ export default function App(){
                 </Link>
               </VStack>
             </Box>
-        {/* End of Mobile Hamburger menu */}
+            {/* End of Mobile Hamburger menu */}
 
         {/* Start of desktop nav view */}
             <HStack spacing={3} display={{ base: "none", md: "inline-flex" }}>
@@ -124,8 +129,7 @@ export default function App(){
                 color: 'brandTheme.700',
                 }}
               _dark={{
-                  color: 'brandTheme.600',
-                  _hover: { color: 'brandTheme.700' },
+                  color: 'brandTheme.700',
               }}
               >
                 Home
@@ -140,9 +144,8 @@ export default function App(){
               bg: 'brandTheme.800',
               color: 'brandTheme.700',
               }}
-            _dark={{
-                color: 'brandTheme.600',
-                _hover: { color: 'brandTheme.700' },
+              _dark={{
+                color: 'brandTheme.700',
             }}
             >
                 Projects
@@ -157,9 +160,8 @@ export default function App(){
               bg: 'brandTheme.800',
               color: 'brandTheme.700',
               }}
-            _dark={{
-                color: 'brandTheme.600',
-                _hover: { color: 'brandTheme.700' },
+              _dark={{
+                color: 'brandTheme.700',
             }}
             >
                 Skills
@@ -174,29 +176,41 @@ export default function App(){
             alignItems="center"
           >
 
+            <Stack align='center' direction='row'>
+              <Button
+              onClick={() => toggleColorMode()}
+              m='inherit'
+              >
+                {colorMode === 'dark' ? <SunIcon color='orange.200'/> : <MoonIcon color='blue.600'/>}
+              </Button>
+            </Stack>
+
             <Link to={'/contact'}>
               <Button 
                 variant="outline" 
                 leftIcon={<AiOutlineMail />}
                 size="lg"
                 mr={4} 
-                bg={['brandTheme.700']} 
+                bg='brandTheme.700' 
                 color={['brandTheme.900']}
                 _hover={{
                   bg: 'brandTheme.800',
                   color: 'brandTheme.700',
                   }}
                 _dark={{
-                    color: 'brandTheme.600',
-                    _hover: { color: 'brandTheme.700' },
+                    bg: 'brandTheme.600',
+                    color: 'brandTheme.900',
+                    _hover: { 
+                      bg: 'brandTheme.800',
+                      color: 'brandTheme.700' },
                 }}
                 >
                 Contact
               </Button>
             </Link>
-            {/* End of desktop nav view */}
 
           </HStack>
+          {/* End of desktop nav view */}
         </Flex>
       </chakra.header>
     </React.Fragment>
