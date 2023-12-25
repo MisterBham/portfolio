@@ -18,7 +18,7 @@ export default function Contact() {
     emailjs.sendForm('misterbham.dev', 'template_m1i5uwf', form.current, 'h9kwCj62aXeh2t7yJ')
       .then((result) => {
           console.log(result.text);
-          console.log('Contact form sent successfully! I will be in touch soon.')
+          alert('Email sent successfully! I will be in touch soon.')
       }, (error) => {
           console.log(error.text);
           alert('Apologies, the form doesn\'t seem to be working correctly at the moment. /n May I please ask that you email misterbham.dev@gmail.com directly? ')
@@ -35,29 +35,35 @@ export default function Contact() {
     onSubmit={sendEmail}
   >
     <FormControl >
-      <FormLabel>Name</FormLabel>
+      <FormLabel as='name'>Name</FormLabel>
       <Input 
         name='name' 
         type='text'
+        autoComplete='name'
+        id='name'
         placeholder="e.g. Sarah Kensington" 
         mb='5'
         focusBorderColor='teal'
         border='1px solid silver'
         />
 
-      <FormLabel>Email address</FormLabel>
+      <FormLabel as='email'>Email address</FormLabel>
       <Input 
         name='email' 
         type="email" 
+        autoComplete='email'
+        id='email'
         placeholder="e.g. skensington@outlook.com"
         focusBorderColor='teal'
         border='1px solid silver'
         mb='5'
         />
 
-      <FormLabel>Message</FormLabel>
+      <FormLabel as='message'>Message</FormLabel>
       <Textarea
         name='message'
+        autoComplete='off'
+        id='message'
         placeholder="Hey Brian, I'd like to get into contact with you..."
         size="sm"
         mb='5'

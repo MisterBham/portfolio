@@ -6,7 +6,7 @@ export default function Footer() {
     <Flex
         w="full"
         bg='brandTheme.600'
-        _dark={{ bg: 'brandTheme.900' }}
+        _dark={{ bg: 'brandTheme.600' }}
         p='3'
         alignItems="center"
         justifyContent="center"
@@ -24,7 +24,7 @@ export default function Footer() {
         py={{ base: "1", md: "4"}}
         bg='brandTheme.700'
         _dark={{
-            bg: 'brandTheme.600',
+            bg: 'brandTheme.900'
         }}
         >
         <chakra.a
@@ -35,7 +35,7 @@ export default function Footer() {
                 color: 'brandTheme.800',
                 }}
             _dark={{
-                color: 'brandTheme.700',
+                color: 'brandTheme.600',
                 _hover: { color: 'brandTheme.800' },
             }}
         >
@@ -55,7 +55,7 @@ export default function Footer() {
                     color: 'brandTheme.800',
                 }}
                 _dark={{ 
-                    color: 'brandTheme.700', 
+                    color: 'brandTheme.600', 
                     _hover: { color: 'brandTheme.800' } 
                 }}
                 >
@@ -76,7 +76,7 @@ export default function Footer() {
                 color: 'brandTheme.800',
             }}
             _dark={{ 
-                color: 'brandTheme.700', 
+                color: 'brandTheme.600', 
                 _hover: { color: 'brandTheme.800' } }}
             >
             <Icon boxSize="7" viewBox="0 0 24 24" fill="currentColor">
@@ -96,7 +96,7 @@ export default function Footer() {
                 color: 'brandTheme.800',
             }}
             _dark={{ 
-                color: 'brandTheme.700', 
+                color: 'brandTheme.600', 
                 _hover: { color: 'brandTheme.800' } 
             }}
             >

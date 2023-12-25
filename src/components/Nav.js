@@ -13,7 +13,7 @@ export default function App(){
   return (
     <React.Fragment>
       <chakra.header
-        bg='theme.colors.600'
+        bg='brandTheme.600'
         w='full'
         px={{ base: 2, sm: 4 }}
         py={4}
@@ -47,7 +47,7 @@ export default function App(){
                 p={2}
                 pb={2}
                 m={2}
-                bg='brandTheme.600'
+                bg='brandTheme.900'
                 spacing={1}
                 rounded="sm"
                 shadow="sm"
@@ -110,7 +110,7 @@ export default function App(){
                 </Link>
               </VStack>
             </Box>
-        {/* End of Mobile Hamburger menu */}
+            {/* End of Mobile Hamburger menu */}
 
         {/* Start of desktop nav view */}
             <HStack spacing={3} display={{ base: "none", md: "inline-flex" }}>
@@ -129,8 +129,7 @@ export default function App(){
                 color: 'brandTheme.700',
                 }}
               _dark={{
-                  color: 'brandTheme.600',
-                  _hover: { color: 'brandTheme.700' },
+                  color: 'brandTheme.700',
               }}
               >
                 Home
@@ -145,9 +144,8 @@ export default function App(){
               bg: 'brandTheme.800',
               color: 'brandTheme.700',
               }}
-            _dark={{
-                color: 'brandTheme.600',
-                _hover: { color: 'brandTheme.700' },
+              _dark={{
+                color: 'brandTheme.700',
             }}
             >
                 Projects
@@ -162,9 +160,8 @@ export default function App(){
               bg: 'brandTheme.800',
               color: 'brandTheme.700',
               }}
-            _dark={{
-                color: 'brandTheme.600',
-                _hover: { color: 'brandTheme.700' },
+              _dark={{
+                color: 'brandTheme.700',
             }}
             >
                 Skills
@@ -188,30 +185,32 @@ export default function App(){
               </Button>
             </Stack>
 
-
             <Link to={'/contact'}>
               <Button 
                 variant="outline" 
                 leftIcon={<AiOutlineMail />}
                 size="lg"
                 mr={4} 
-                bg={['brandTheme.700']} 
+                bg='brandTheme.700' 
                 color={['brandTheme.900']}
                 _hover={{
                   bg: 'brandTheme.800',
                   color: 'brandTheme.700',
                   }}
                 _dark={{
-                    color: 'brandTheme.600',
-                    _hover: { color: 'brandTheme.700' },
+                    bg: 'brandTheme.600',
+                    color: 'brandTheme.900',
+                    _hover: { 
+                      bg: 'brandTheme.800',
+                      color: 'brandTheme.700' },
                 }}
                 >
                 Contact
               </Button>
             </Link>
-            {/* End of desktop nav view */}
 
           </HStack>
+          {/* End of desktop nav view */}
         </Flex>
       </chakra.header>
     </React.Fragment>
