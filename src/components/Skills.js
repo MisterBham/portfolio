@@ -10,7 +10,7 @@ import { VscTerminalCmd } from "react-icons/vsc";
 function Skills() {
   return (
     <>
-    <Container maxW="90%" maxH="85%" pb='12' overflow='scroll'>
+    <Container maxW="90%" maxH="85%" pb='12' overflow='auto'>
       <Center className='animate__animated animate__fadeInUpBig' fontSize={{base:'md', md:'lg'}}>
         <VStack spacing={3}>
           {/* Dev Skills Section */}
