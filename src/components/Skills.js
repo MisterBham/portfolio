@@ -10,11 +10,11 @@ import { VscTerminalCmd } from "react-icons/vsc";
 function Skills() {
   return (
     <>
-    <Container maxW="90%" maxH="85%" pb='12' overflow='auto'>
-      <Center className='animate__animated animate__fadeInUpBig' fontSize={{base:'md', md:'lg'}}>
+    <Container maxW="95%" pb={{ base: '20%', md: '0' }} overflow='auto'>
+      <Center className='animate__animated animate__fadeInUpBig' fontSize={{ base: 'md', md: 'lg' }}>
         <VStack spacing={3}>
           {/* Dev Skills Section */}
-          <Stack spacing={0} align='stretch' textAlign={{base:'center', md:'start'}}>
+          <Stack spacing={0} align='stretch' textAlign={{ base: 'center', md: 'start' }}>
           <Center fontSize='1.50rem' mt='2' mb='1' as='b' textTransform='uppercase' color='brandTheme.800'>Development:</Center>
               <Wrap justify={{base:'center', md:'start'}} spacing='0'>
                 <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} mt={{base:'1', md:'0'}}>Front-end:</Text>
