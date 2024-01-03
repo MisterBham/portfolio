@@ -165,7 +165,7 @@ function Skills() {
           color='brandTheme.800'
           _dark={{ 
             bg:'rgba(85, 85, 85, 0.2)',
-            color: 'brandTheme.800'
+            color: 'brandTheme.600'
           }}
           >
             <Text as='b'>Resume available upon request, simply use the embedded <Link href={'#/contact'}>Contact</Link> form to reach me!</Text>
