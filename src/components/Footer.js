@@ -3,26 +3,18 @@ import { chakra, Flex, Icon } from "@chakra-ui/react";
 
 export default function Footer() {
     return (
-    <Flex
-        w="full"
-        bg='brandTheme.600'
-        _dark={{ bg: 'brandTheme.900' }}
-        p='3'
-        alignItems="center"
-        justifyContent="center"
-        left={0}
-        bottom={0}
-        position={"fixed"}
-    >
         <Flex
         w="full"
         as="footer"
         flexDir={{ base: "column", sm: "row" }}
-        align="center"
+        alignItems="center"
         justify="space-between"
         px={{ base: "1", md: "6"}}
         py={{ base: "1", md: "4"}}
-        bg='brandTheme.700'
+        left={0}
+        bottom={0}
+        position={"fixed"}
+        bg='brandTheme.600'
         _dark={{
             bg: 'brandTheme.900'
         }}
@@ -106,6 +98,5 @@ export default function Footer() {
 
             </Flex>
         </Flex>
-    </Flex>
     );
 }
