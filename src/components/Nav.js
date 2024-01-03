@@ -47,7 +47,8 @@ export default function App(){
                 p={2}
                 pb={2}
                 m={2}
-                bg='brandTheme.900'
+                bg='brandTheme.600'
+                _dark={{ bg: 'brandTheme.900' }}
                 spacing={1}
                 rounded="sm"
                 shadow="sm"
