@@ -6,7 +6,7 @@ export default function Footer() {
     <Flex
         w="full"
         bg='brandTheme.600'
-        _dark={{ bg: 'brandTheme.600' }}
+        _dark={{ bg: 'brandTheme.900' }}
         p='3'
         alignItems="center"
         justifyContent="center"
@@ -36,7 +36,6 @@ export default function Footer() {
                 }}
             _dark={{
                 color: 'brandTheme.600',
-                _hover: { color: 'brandTheme.800' },
             }}
         >
             Brian Hamlin

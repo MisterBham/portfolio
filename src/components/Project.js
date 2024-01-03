@@ -123,14 +123,17 @@ export default function Project(){
         width={{ base: '100%', md: '35%' }}
         src={project.img}
         alt={project.alt}
-        // Don't want this to occur on mobile. 
-        // onMouseEnter={(e) => { e.target.style.width = '55%' }}
-        // onMouseOut={(e) => { e.target.style.width = '35%' }}
       />
 
       <Center width={{ base: '100%', md: '65%' }} textAlign='center'>
         <CardBody paddingBottom='1' verticalAlign='center'>
-          <Heading size='md' color='brandTheme.500' as='u'>
+          <Heading 
+            size='md' 
+            color='brandTheme.500' 
+            as='u'
+            _dark={{
+              color: 'brandTheme.700',
+            }}>
             {project.label}
           </Heading>
           <Text pt='1rem'>
@@ -140,13 +143,13 @@ export default function Project(){
           {project.stack}
           </Text>
           <Link href={project.source} target='_blank' isExternal>
-            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.500', color: 'brandTheme.700'}} margin='1'>
+            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
               {`<Source />`}
             </Button>
           </Link>
           {project.app ? (        
             <Link href={project.app} target='_blank' isExternal>
-            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.500', color: 'brandTheme.700'}} margin='1'>
+            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
               Application
             </Button>
             </Link>
