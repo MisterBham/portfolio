@@ -8,24 +8,26 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import '../components/Homepage.css';
 
-import image1 from '../assets/images/personal/new/IMG_3135.jpg';
-import image2 from '../assets/images/personal/new/IMG_1854.jpg';
-import image3 from '../assets/images/personal/new/IMG_0563.jpg';
-import image4 from '../assets/images/personal/new/CJNY8798.jpg';
-import image5 from '../assets/images/personal/new/UZTD2692.jpg';
-import image6 from '../assets/images/personal/new/IMG_0526.jpg';
-import image7 from '../assets/images/personal/new/IMG_3610.jpg';
+import image1 from '../assets/images/personal/IMG_3135.jpg';
+import image2 from '../assets/images/personal/IMG_1854.jpg';
+import image3 from '../assets/images/personal/IMG_0563.jpg';
+import image4 from '../assets/images/personal/CJNY8798.jpg';
+import image5 from '../assets/images/personal/UZTD2692.jpg';
+import image6 from '../assets/images/personal/IMG_0526.jpg';
+import image7 from '../assets/images/personal/IMG_3610.jpg';
 
 export default function Homepage() {
   return (
     <>
     <Container 
     maxW="90%" 
-    my="7"
+    mt="7"
     pb={{base:'25%', sm:'10%'}}
     fontSize={{base:'md', md:'lg'}}
     textAlign={{base:'center', md:'start'}}
+    overflow='auto'
     >
+      
 <Flex 
   w='full'
   h='350px'>

@@ -106,7 +106,7 @@ export default function Project(){
 
   return (
     <>
-    <Box pb={{ base: '5rem', md: '8rem' }} fontSize={{base:'md', md:'lg'}}>
+    <Box pb='6rem' fontSize={{base:'md', md:'lg'}}>
     {projects.map((project, index) => (
       <Card
       key={project.label}
@@ -114,8 +114,8 @@ export default function Project(){
       overflow='hidden'
       variant='outline'
       bg='rgba(60, 110, 113, 0.15)'
-      mt={{ base: '2rem', md: '4rem' }}
-      mx={{ base: '1rem', md: '4rem' }}
+      mt={{ base: '2rem', md: '2rem' }}
+      mx={{ base: '2rem', md: '4rem' }}
     >
 
       <Image

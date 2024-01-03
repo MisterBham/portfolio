@@ -31,6 +31,6 @@ Should you have any further questions, please reach the developer at: misterbham
 GitHub: <a href="https://github.com/MisterBham">MisterBham</a> </br> 
 
 ### Screenshots
-<img src="./src/assets/images/homepage-screenshot.jpg" width=50% height=50%> <br> 
-<img src="./src/assets/images/contact-screenshot.jpg" width=50% height=50%> <br> 
-<img src="./src/assets/images/projects-mobileview-screenshot.jpg" width=25% height=25%> <br> 
+<img src="./src/assets/images/readme/home-screenshot-dark.png" width=50% height=50%> <br> 
+<img src="./src/assets/images/readme/skills-screenshot-dark.png" width=50% height=50%> <br> 
+<img src="./src/assets/images/readme/contact-screenshot-light-mobile.png" width=25% height=25%> <br> 
