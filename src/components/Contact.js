@@ -7,7 +7,7 @@ import {
   FormHelperText,
   Input,
   Textarea,
-  Link
+  Link,
 } from "@chakra-ui/react";
 import emailjs from '@emailjs/browser';
 
@@ -18,7 +18,7 @@ export default function Contact() {
     emailjs.sendForm('misterbham.dev', 'template_m1i5uwf', form.current, 'h9kwCj62aXeh2t7yJ')
       .then((result) => {
           console.log(result.text);
-          // alert('Email sent successfully! I will be in touch soon.')
+          alert('Email sent successfully! I will be in touch soon.')
       }, (error) => {
           console.log(error.text);
           alert('Apologies, the form doesn\'t seem to be working correctly at the moment. /n May I please ask that you email misterbham.dev@gmail.com directly? ')
@@ -34,7 +34,7 @@ export default function Contact() {
         ref={form} 
         onSubmit={sendEmail}
       >
-        <FormControl >
+        <FormControl isRequired>
           <FormLabel>Name</FormLabel>
           <Input 
             name='name' 
