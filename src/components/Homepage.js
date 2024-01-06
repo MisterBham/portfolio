@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Center, Text, Flex } from '@chakra-ui/react';
+import { Box, Center, Text, Flex, Container } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import 'animate.css';
@@ -18,62 +18,56 @@ import image7 from '../assets/images/personal/IMG_3610.jpg';
 
 export default function Homepage() {
   return (
-    <>
-    <Container 
-    maxW="90%" 
-    mt="7"
-    pb={{base:'25%', sm:'10%'}}
+    <Box 
     fontSize={{base:'md', md:'lg'}}
     textAlign={{base:'center', md:'start'}}
-    overflow='auto'
+    width='full'
+    px='5%'
     >
-      
-<Flex 
-  w='full'
-  h='350px'>
-<Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src={image1} alt='Brian and Family' />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src={image2} alt='Brian and Family' />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src={image3} alt='Brian and Family' />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src={image4} alt='Brian and Family' />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src={image5} alt='Brian and Family' />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src={image6} alt='Brian and Family' />
-        </SwiperSlide>
-        <SwiperSlide>
-        <img src={image7} alt='Brian and Family' />
-        </SwiperSlide>
-      </Swiper>
-</Flex>
+      <Flex w='full' h='350px'>
+        <Swiper
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          slidesPerView={'auto'}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src={image1} alt='Brian and Family' />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={image2} alt='Brian and Family' />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={image3} alt='Brian and Family' />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={image4} alt='Brian and Family' />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={image5} alt='Brian and Family' />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={image6} alt='Brian and Family' />
+          </SwiperSlide>
+          <SwiperSlide>
+          <img src={image7} alt='Brian and Family' />
+          </SwiperSlide>
+        </Swiper>
+      </Flex>
 
       <Center>
         <Text className="animate__animated animate__wobble" fontSize='4xl' my='4'>
@@ -86,7 +80,6 @@ export default function Homepage() {
       <Box mb='3'> 
         As my career in technology has progressed, I've encountered numerous command line interfaces and discovered a genuine fascination for them, prompting me to delve deeper into the realm of software development. Amplifying upon multiple years of self-guided learning, I'm excited to share that I have recently graduated the University of Texas at Austin software engineering bootcamp, where I explored the intricacies of the MERN stack and gained crucial insights into full-stack development. I am immensely excited to start contributing to enterprise applications and create future technical solutions!
       </Box>
-    </Container>
-    </>
+    </Box>
   );
 }

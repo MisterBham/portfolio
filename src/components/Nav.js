@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { chakra, Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar, Stack, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar, Stack, useColorMode, Heading } from "@chakra-ui/react";
 import { AiOutlineMenu, AiFillHome, AiOutlineMail } from "react-icons/ai";
 import { BsFillArchiveFill } from "react-icons/bs";
 import { FaCog } from "react-icons/fa";
@@ -12,186 +12,183 @@ export default function App(){
 
   return (
     <React.Fragment>
-      <chakra.header
+      <Heading
         bg='brandTheme.600'
         w='full'
-        px={{ base: 2, sm: 4 }}
-        py={4}
+        px='2vw'
+        py='1vh'
+        display='flex'
+        justifyContent='space-between'
         shadow="md"
+        height='7.5vh'
         _dark={{
           bg: 'brandTheme.900'
       }}
       >
-        <Flex alignItems="center" justifyContent="space-between" mx="auto">
-          <HStack display="flex" spacing={2} alignItems="center">
-            {/* Start of Mobile Hamburger menu */}
-            <Box display={{ base: "inline-flex", md: "none" }}>
-              <IconButton
-                display={{ base: "flex", md: "none" }}
-                aria-label="Open menu"
-                fontSize="20px"
-                color='brandTheme.900'
-                _dark={{ color: 'brandTheme.700' }}
-                variant="ghost"
-                icon={<AiOutlineMenu />}
-                onClick={mobileNav.onOpen}
-              />
-              <VStack
-                pos="absolute"
-                top={0}
-                left={0}
-                right={0}
-                zIndex={999}
-                display={mobileNav.isOpen ? "flex" : "none"}
-                flexDirection="column"
-                p={2}
-                pb={2}
-                m={2}
-                bg='brandTheme.600'
-                _dark={{ bg: 'brandTheme.900' }}
-                spacing={1}
-                rounded="sm"
-                shadow="sm"
-              >
-                <CloseButton
-                  aria-label="Close menu"
-                  justifySelf="self-start"
-                  onClick={mobileNav.onClose}
-                />
-                <Link to={'/'}>
-                  <Button 
-                  variant="ghost" 
-                  leftIcon={<AiFillHome />}
-                  onClick={mobileNav.onClose}
-                  _hover={{
-                    bg: 'brandTheme.800',
-                    color: 'brandTheme.700',
-                    }}
-                  _dark={{
-                      color: 'brandTheme.600',
-                      _hover: { color: 'brandTheme.700' },
-                  }}
-                  >
-                    Home
-                  </Button>
-                </Link>
-                <Link to={'/project'}>
-                  <Button 
-                  variant="ghost" 
-                  leftIcon={<BsFillArchiveFill />}
-                  onClick={mobileNav.onClose}
-                  _hover={{
-                    bg: 'brandTheme.800',
-                    color: 'brandTheme.700',
-                    }}
-                  _dark={{
-                      color: 'brandTheme.600',
-                      _hover: { color: 'brandTheme.700' },
-                  }}
-                  >
-                    Projects
-                  </Button>
-                </Link>
-                <Link to={'/skills'}>
-                  <Button 
-                  variant="ghost" 
-                  leftIcon={<FaCog />}
-                  onClick={mobileNav.onClose}
-                  _hover={{
-                    bg: 'brandTheme.800',
-                    color: 'brandTheme.700',
-                    }}
-                  _dark={{
-                      color: 'brandTheme.600',
-                      _hover: { color: 'brandTheme.700' },
-                  }}
-                  >
-                    Skills
-                  </Button>
-                </Link>
-              </VStack>
-            </Box>
-            {/* End of Mobile Hamburger menu */}
 
-        {/* Start of desktop nav view */}
-            <HStack spacing={3} display={{ base: "none", md: "inline-flex" }}>
-            <Avatar
-              size="md"
-              name="Brian Hamlin"
-              src="https://avatars.githubusercontent.com/u/40344045?v=4"
+        {/* Mobile View */}
+        <Flex 
+          alignContent='center' 
+          flexWrap='wrap'
+          display={{ base: 'inline-flex', md: 'none' }}
+          >
+          <IconButton
+            display={mobileNav.isOpen ? 'none' : 'flex'}
+            aria-label="Open menu"
+            fontSize='1.25rem'
+            color='brandTheme.900'
+            _dark={{ color: 'brandTheme.700' }}
+            variant="ghost"
+            icon={<AiOutlineMenu />}
+            onClick={mobileNav.onOpen}
+          />
+          <VStack 
+            display={mobileNav.isOpen ? "flex" : "none"}
+            bg='brandTheme.600'
+            _dark={{ bg: 'brandTheme.900' }}
+            pos="absolute"
+            top={1}
+            left={0}
+            right={0}
+            zIndex={999}
+            spacing='0'
+          >
+            <CloseButton
+              aria-label="Close menu"
+              justifySelf="self-start"
+              onClick={mobileNav.onClose}
             />
             <Link to={'/'}>
-            <Button 
+              <Button 
               variant="ghost" 
-              leftIcon={<AiFillHome />} 
-              size="lg"
-              _hover={{
-                bg: 'brandTheme.800',
-                color: 'brandTheme.700',
-                }}
+              leftIcon={<AiFillHome />}
+              onClick={mobileNav.onClose}
               _dark={{
-                  color: 'brandTheme.700',
+                  color: 'brandTheme.600',
               }}
               >
                 Home
               </Button>
             </Link>
             <Link to={'/project'}>
-            <Button 
-            variant="ghost" 
-            leftIcon={<BsFillArchiveFill />} 
-            size="lg"
-            _hover={{
-              bg: 'brandTheme.800',
-              color: 'brandTheme.700',
-              }}
+              <Button 
+              variant="ghost" 
+              leftIcon={<BsFillArchiveFill />}
+              onClick={mobileNav.onClose}
               _dark={{
-                color: 'brandTheme.700',
-            }}
-            >
+                  color: 'brandTheme.600',
+              }}
+              >
                 Projects
               </Button>
             </Link>
             <Link to={'/skills'}>
-            <Button 
+              <Button 
+              variant="ghost" 
+              leftIcon={<FaCog />}
+              onClick={mobileNav.onClose}
+              _dark={{
+                  color: 'brandTheme.600',
+              }}
+              >
+                Skills
+              </Button>
+            </Link>
+          </VStack>
+          
+        </Flex>
+        
+        {/* <VStack
+          pos="absolute"
+          top={0}
+          left={0}
+          right={0}
+          zIndex={999}
+          display={mobileNav.isOpen ? "flex" : "none"}
+          flexDirection="column"
+          p={2}
+          pb={2}
+          m={2}
+          bg='brandTheme.600'
+          _dark={{ bg: 'brandTheme.900' }}
+          spacing={1}
+          rounded="sm"
+          shadow="sm"
+        >
+
+        </VStack> */}
+
+        {/* Modular Desktop View */}
+        <HStack 
+          display={{base: "none", md: "inline-flex"}}>
+          <Avatar
+            size="md"
+            name="Brian Hamlin"
+            src="https://avatars.githubusercontent.com/u/40344045?v=4"
+          />
+          <Link to={'/'}>
+          <Button 
             variant="ghost" 
-            leftIcon={<FaCog />} 
+            leftIcon={<AiFillHome />} 
             size="lg"
             _hover={{
               bg: 'brandTheme.800',
               color: 'brandTheme.700',
               }}
-              _dark={{
-                color: 'brandTheme.700',
+            _dark={{
+              color: 'brandTheme.700',
             }}
             >
-                Skills
-              </Button>
-            </Link>
-            </HStack>
-          </HStack>
-          
-          <HStack
-            spacing={3}
-            display={mobileNav.isOpen ? "none" : "flex"}
-            alignItems="center"
+              Home
+            </Button>
+          </Link>
+          <Link to={'/project'}>
+          <Button 
+          variant="ghost" 
+          leftIcon={<BsFillArchiveFill />} 
+          size="lg"
+          _hover={{
+            bg: 'brandTheme.800',
+            color: 'brandTheme.700',
+            }}
+            _dark={{
+              color: 'brandTheme.700',
+          }}
           >
+              Projects
+            </Button>
+          </Link>
+          <Link to={'/skills'}>
+          <Button 
+          variant="ghost" 
+          leftIcon={<FaCog />} 
+          size="lg"
+          _hover={{
+            bg: 'brandTheme.800',
+            color: 'brandTheme.700',
+            }}
+            _dark={{
+              color: 'brandTheme.700',
+          }}
+          >
+              Skills
+            </Button>
+          </Link>
+        </HStack>
 
-            <Stack align='center' direction='row'>
-              <Button
-              onClick={() => toggleColorMode()}
-              m='inherit'
-              >
-                {colorMode === 'dark' ? <SunIcon color='orange.200'/> : <MoonIcon color='blue.600'/>}
-              </Button>
-            </Stack>
-
-            <Link to={'/contact'}>
+        {/* Exists in both views */}
+        <HStack>
+          <Button
+            height='full'
+            onClick={() => toggleColorMode()}
+            >
+            {colorMode === 'dark' ? <SunIcon color='orange.200'/> : <MoonIcon color='blue.600'/>}
+          </Button>
+          <Link to={'/contact'}>
               <Button 
                 variant="outline" 
                 leftIcon={<AiOutlineMail />}
                 size="lg"
-                mr={4} 
                 bg='brandTheme.700' 
                 color={['brandTheme.900']}
                 _hover={{
@@ -209,11 +206,9 @@ export default function App(){
                 Contact
               </Button>
             </Link>
-
-          </HStack>
-          {/* End of desktop nav view */}
-        </Flex>
-      </chakra.header>
+        </HStack>
+        
+      </Heading>
     </React.Fragment>
   );
 };

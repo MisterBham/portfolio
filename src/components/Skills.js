@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Card, Container, Center, Link, VStack, Stack, Wrap, WrapItem, Text } from '@chakra-ui/react';
+import { Box, Card, Container, Center, Link, VStack, Stack, Wrap, WrapItem, Text, Flex } from '@chakra-ui/react';
 import { SiExpress, SiSequelize, SiMongodb, SiMongoose, SiJavascript, SiNetlify, SiPowershell, SiGnubash } from 'react-icons/si';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGitAlt, FaGithub} from 'react-icons/fa';
 import { LuFileJson2 } from "react-icons/lu";
@@ -9,15 +9,20 @@ import { VscTerminalCmd } from "react-icons/vsc";
 
 function Skills() {
   return (
-    <>
-    <Container maxW="95%" pb={{ base: '20%', md: '0' }} overflow='auto'>
+    <Flex 
+      width='full'
+      justifyContent='center'
+      // maxW="95%" 
+      // pb={{ base: '20%', md: '0' }} 
+      // overflow='scroll'
+      >
       <Center className='animate__animated animate__fadeInUpBig' fontSize={{ base: 'md', md: 'lg' }}>
-        <VStack spacing={3}>
+        <VStack>
           {/* Dev Skills Section */}
-          <Stack spacing={0} align='stretch' textAlign={{ base: 'center', md: 'start' }}>
+          <Stack textAlign={{ base: 'center', md: 'start' }}>
           <Center fontSize='1.50rem' mt='2' mb='1' as='b' textTransform='uppercase' color='brandTheme.800'>Development:</Center>
-              <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-                <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} mt={{base:'1', md:'0'}}>Front-end:</Text>
+              <Wrap justify={{base:'center', md:'start'}}>
+                <Text as='b' color='brandTheme.800'>Front-end:</Text>
                 <WrapItem>
                   <Box ml='3' mr='1'><FaReact /></Box>
                   <Box mr='1'>React</Box>
@@ -122,7 +127,7 @@ function Skills() {
             </Wrap>
           </Stack>
           {/* Tech Skills Section */}
-          <Stack spacing={0} align='stretch' textAlign={{base:'center', md:'start'}}>
+          <Stack textAlign={{base:'center', md:'start'}}>
           <Center fontSize='1.50rem' mt='2' mb='1' as='b' textTransform='uppercase' color='brandTheme.800'>Technical:</Center>
           <Wrap justify={{base:'center', md:'start'}} spacing='0'>
             <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'start'}} mt={{base:'1', md:'0'}}>Operating System:</Text>
@@ -172,8 +177,7 @@ function Skills() {
           </Card>
         </VStack>
       </Center>
-    </Container>     
-    </>
+    </Flex>     
   );
 }
 

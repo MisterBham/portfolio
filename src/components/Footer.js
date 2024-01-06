@@ -1,16 +1,15 @@
 import React from "react";
-import { chakra, Flex, Icon } from "@chakra-ui/react";
+import { chakra, Flex, Icon, Text } from "@chakra-ui/react";
 
 export default function Footer() {
     return (
         <Flex
         w="full"
         as="footer"
-        flexDir={{ base: "column", sm: "row" }}
         alignItems="center"
         justify="space-between"
-        px={{ base: "1", md: "6"}}
-        py={{ base: "1", md: "4"}}
+        px={{ base:'5vw', md:'2vw' }}
+        height='7.5vh'
         left={0}
         bottom={0}
         position={"fixed"}
@@ -19,28 +18,23 @@ export default function Footer() {
             bg: 'brandTheme.900'
         }}
         >
-        <chakra.a
-            fontSize="xl"
-            fontWeight="bold"
-            color='brandTheme.900'
-            _hover={{
-                color: 'brandTheme.800',
+            <Text
+                fontSize="xl"
+                fontWeight="bold"
+                color='brandTheme.900'
+                _dark={{
+                    color: 'brandTheme.600',
                 }}
-            _dark={{
-                color: 'brandTheme.600',
-            }}
-        >
-            Brian Hamlin
-        </chakra.a>
+            >
+                Brian Hamlin
+            </Text>
 
-            <Flex>
+            <Flex gap={{ base: '1rem', sm: '2rem' }}>
             {/* GitHub Logo */}
             <chakra.a
                 href="https://github.com/MisterBham"
                 target="_blank"
                 aria-label="Github"
-                mx="4"
-                my={{ base: '1', md: '0' }}
                 color='brandTheme.900'
                 _hover={{
                     color: 'brandTheme.800',
@@ -60,8 +54,6 @@ export default function Footer() {
             href="https://www.linkedin.com/in/brianhamlin"
             target="_blank"
             aria-label="LinkedIn"
-            mx="4"
-            my={{ base: '1', md: '0' }}
             color='brandTheme.900'
             _hover={{
                 color: 'brandTheme.800',
@@ -80,8 +72,6 @@ export default function Footer() {
             href="https://twitter.com/misterbham"
             target="_blank"
             aria-label="Twitter"
-            mx="4"
-            my={{ base: '1', md: '0' }}
             color='brandTheme.900'
             _hover={{
                 color: 'brandTheme.800',
