@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import {
   Button,
-  Container,
+  Flex,
   FormControl,
   FormLabel,
   FormHelperText,
@@ -26,9 +26,11 @@ export default function Contact() {
   };
   
   return (
-    <Container 
-      maxW={{ base: '80%', md: '80%'}} 
-      mt='10'
+    <Flex 
+      width='full'
+      justifyContent='center'
+      px='5vw'
+      pt='2vh'
       >
       <form 
         ref={form} 
@@ -96,6 +98,6 @@ export default function Contact() {
           </FormHelperText>
         </FormControl>
       </form>
-    </Container>
+    </Flex>
   );
 }

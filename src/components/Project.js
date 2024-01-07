@@ -1,16 +1,5 @@
 import React from "react";
-import { 
-  Box,
-  Center,
-  Image, 
-  Text, 
-  Link,
-  Button,
-  Card, 
-  CardBody, 
-  Heading,
-} from "@chakra-ui/react";
-
+import { Box, Center, Image, Text, Link, Button, Card, CardBody, Heading } from "@chakra-ui/react";
 import dude from '../assets/images/dude-wheres-my-show.png';
 import fusionfables from '../assets/images/fusion-fables.png';
 import schedaddy from '../assets/images/schedaddy.jpg';
@@ -105,61 +94,62 @@ export default function Project(){
   ];
 
   return (
-    <>
-    <Box pb='6rem' fontSize={{base:'md', md:'lg'}}>
-    {projects.map((project, index) => (
-      <Card
-      key={project.label}
-      direction={{ base: 'column', md: 'row' }}
-      overflow='hidden'
-      variant='outline'
-      bg='rgba(60, 110, 113, 0.15)'
-      mt={{ base: '2rem', md: '2rem' }}
-      mx={{ base: '2rem', md: '4rem' }}
+    <Box 
+      fontSize={{base:'md', md:'lg'}}
+      width='full'
     >
+      {projects.map((project, index) => (
+        <Card
+          key={project.label}
+          direction={{ base: 'column', md: 'row' }}
+          overflow='hidden'
+          variant='outline'
+          bg='rgba(60, 110, 113, 0.15)'
+          mt={{ base: '2rem', md: '2rem' }}
+          mx={{ base: '2rem', md: '4rem' }}
+        >
 
-      <Image
-        objectFit='cover'
-        width={{ base: '100%', md: '35%' }}
-        src={project.img}
-        alt={project.alt}
-      />
+        <Image
+          objectFit='cover'
+          width={{ base: '100%', md: '35%' }}
+          src={project.img}
+          alt={project.alt}
+        />
 
-      <Center width={{ base: '100%', md: '65%' }} textAlign='center'>
-        <CardBody paddingBottom='1' verticalAlign='center'>
-          <Heading 
-            size='md' 
-            color='brandTheme.500' 
-            as='u'
-            _dark={{
-              color: 'brandTheme.700',
-            }}>
-            {project.label}
-          </Heading>
-          <Text pt='1rem'>
-            {project.description}
-          </Text>
-          <Text>
-          {project.stack}
-          </Text>
-          <Link href={project.source} target='_blank' isExternal>
-            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
-              {`<Source />`}
-            </Button>
-          </Link>
-          {project.app ? (        
-            <Link href={project.app} target='_blank' isExternal>
-            <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
-              Application
-            </Button>
+        <Center width={{ base: '100%', md: '65%' }} textAlign='center'>
+          <CardBody paddingBottom='1' verticalAlign='center'>
+            <Heading 
+              size='md' 
+              color='brandTheme.500' 
+              as='u'
+              _dark={{
+                color: 'brandTheme.700',
+              }}>
+              {project.label}
+            </Heading>
+            <Text pt='1rem'>
+              {project.description}
+            </Text>
+            <Text>
+            {project.stack}
+            </Text>
+            <Link href={project.source} target='_blank' isExternal>
+              <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
+                {`<Source />`}
+              </Button>
             </Link>
-            ) : ('')
-          }
-        </CardBody>
-      </Center>
+            {project.app ? (        
+              <Link href={project.app} target='_blank' isExternal>
+              <Button variant='outline' color='brandTheme.700' bg='brandTheme.500' _hover={{bg: 'brandTheme.800', color: 'brandTheme.700'}} margin='1'>
+                Application
+              </Button>
+              </Link>
+              ) : ('')
+            }
+          </CardBody>
+        </Center>
     </Card>
     ))}
     </Box>
-      </>
   );
 };
