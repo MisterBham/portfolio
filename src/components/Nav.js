@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar, Stack, useColorMode, Heading } from "@chakra-ui/react";
+import { Flex, HStack, Button, useDisclosure, VStack, IconButton, CloseButton, Avatar, useColorMode, Heading } from "@chakra-ui/react";
 import { AiOutlineMenu, AiFillHome, AiOutlineMail } from "react-icons/ai";
 import { BsFillArchiveFill } from "react-icons/bs";
 import { FaCog } from "react-icons/fa";
@@ -98,26 +98,6 @@ export default function App(){
           
         </Flex>
         
-        {/* <VStack
-          pos="absolute"
-          top={0}
-          left={0}
-          right={0}
-          zIndex={999}
-          display={mobileNav.isOpen ? "flex" : "none"}
-          flexDirection="column"
-          p={2}
-          pb={2}
-          m={2}
-          bg='brandTheme.600'
-          _dark={{ bg: 'brandTheme.900' }}
-          spacing={1}
-          rounded="sm"
-          shadow="sm"
-        >
-
-        </VStack> */}
-
         {/* Modular Desktop View */}
         <HStack 
           display={{base: "none", md: "inline-flex"}}>

@@ -11,7 +11,7 @@ function Scrollarea() {
       height='85vh'
       width='full'
       overflow='auto'
-      >
+    >
       <Routes>
       <Route path="/" element={<Homepage />}></Route>
       <Route path="/project" element={<Project />}></Route>

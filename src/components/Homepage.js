@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Center, Text, Flex, Container } from '@chakra-ui/react';
+import { Box, Center, Text, Flex } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import 'animate.css';

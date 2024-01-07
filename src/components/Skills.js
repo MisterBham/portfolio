@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, Card, Container, Center, Link, VStack, Stack, Wrap, WrapItem, Text, Flex } from '@chakra-ui/react';
+import { Card, Link, VStack, Stack, Wrap, WrapItem, Text, Flex, Heading } from '@chakra-ui/react';
 import { SiExpress, SiSequelize, SiMongodb, SiMongoose, SiJavascript, SiNetlify, SiPowershell, SiGnubash } from 'react-icons/si';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaGitAlt, FaGithub} from 'react-icons/fa';
 import { LuFileJson2 } from "react-icons/lu";
@@ -12,171 +12,243 @@ function Skills() {
     <Flex 
       width='full'
       justifyContent='center'
-      // maxW="95%" 
-      // pb={{ base: '20%', md: '0' }} 
-      // overflow='scroll'
+      py='1vw'
+      px='5vw'
       >
-      <Center className='animate__animated animate__fadeInUpBig' fontSize={{ base: 'md', md: 'lg' }}>
-        <VStack>
-          {/* Dev Skills Section */}
-          <Stack textAlign={{ base: 'center', md: 'start' }}>
-          <Center fontSize='1.50rem' mt='2' mb='1' as='b' textTransform='uppercase' color='brandTheme.800'>Development:</Center>
-              <Wrap justify={{base:'center', md:'start'}}>
-                <Text as='b' color='brandTheme.800'>Front-end:</Text>
-                <WrapItem>
-                  <Box ml='3' mr='1'><FaReact /></Box>
-                  <Box mr='1'>React</Box>
-                </WrapItem>
-                <WrapItem>
-                  <Box ml='3' mr='1'><SiJavascript /></Box>
-                  <Box mr='1'>JavaScript</Box>
-                </WrapItem>
-                <WrapItem>
-                  <Box ml='3' mr='1'><FaHtml5 /></Box>
-                  <Box mr='1'>HTML</Box>
-                </WrapItem>
-                <WrapItem>
-                  <Box ml='3' mr='1'><FaCss3Alt /></Box>
-                  <Box mr='1'>CSS</Box>
-                </WrapItem>
-                <WrapItem>
-                  <Box ml='3' mr='1'><FaSass /></Box>
-                  <Box mr='1'>SASS</Box>
-                </WrapItem>
-              </Wrap>
-            <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-              <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'auto'}} mt={{base:'1', md:'0'}}>Back-end:</Text>
-              <WrapItem>
-                <Box ml='3' mr='1'><FaNodeJs /></Box>
-                <Box mr='1'>Node.js</Box>
-              </WrapItem>
-              <WrapItem>
-                <Box ml='3' mr='1'><SiExpress /></Box>
-                <Box mr='1'>Express.js</Box>
-              </WrapItem>
-            </Wrap>
-            <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-              <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'auto'}} mt={{base:'1', md:'0'}}>Version Control:</Text>
-              <WrapItem>
-                <Box ml='3' mr='1'><FaGitAlt /></Box>
-                <Box mr='1'>Git</Box>
-              </WrapItem>
-            </Wrap>
-            <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-              <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'auto'}} mt={{base:'1', md:'0'}}>API:</Text>
-              <WrapItem>
-                <Box ml='3' mr='1'><LuFileJson2 /></Box>
-                <Box mr='1'>REST/JSON</Box>
-              </WrapItem>
-              <WrapItem>
-                <Box ml='3' mr='1'><BsFiletypeXml /></Box>
-                <Box mr='1'>SOAP/XML</Box>
-              </WrapItem>
-            </Wrap>
-            <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-              <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'auto'}} mt={{base:'1', md:'0'}}>Database:</Text>
-              <WrapItem>
-                <Box ml='3' mr='1'><GrMysql /></Box>
-                <Box mr='1'>MySQL</Box>
-              </WrapItem>
-              <WrapItem>
-                <Box ml='3' mr='1'><SiMongodb /></Box>
-                <Box mr='1'>MongoDB</Box>
-              </WrapItem>
-            </Wrap>
-            <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-              <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'auto'}} mt={{base:'1', md:'0'}}>ORM:</Text>
-              <WrapItem>
-                <Box ml='3' mr='1'><SiSequelize /></Box>
-                <Box mr='1'>Sequelize</Box>
-              </WrapItem>
-              <WrapItem>
-                <Box ml='3' mr='1'><SiMongoose /></Box>
-                <Box mr='1'>Mongoose</Box>
-              </WrapItem>
-            </Wrap>
-            <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-              <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'auto'}} mt={{base:'1', md:'0'}}>Deployment:</Text>
-              <WrapItem>
-                <Box ml='3' mr='1'><GrHeroku /></Box>
-                <Box mr='1'>Heroku</Box>
-              </WrapItem>
-              <WrapItem>
-                <Box ml='3' mr='1'><SiNetlify /></Box>
-                <Box mr='1'>Netlify</Box>
-              </WrapItem>
-              <WrapItem>
-                <Box ml='3' mr='1'><FaGithub /></Box>
-                <Box mr='1'>GitHub Pages</Box>
-              </WrapItem>
-            </Wrap>
-            <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-              <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'auto'}} mt={{base:'1', md:'0'}}>CLI:</Text>
-              <WrapItem>
-                <Box ml='3' mr='1'><SiGnubash /></Box>
-                <Box mr='1'>Bash</Box>
-              </WrapItem>
-              <WrapItem>
-                <Box ml='3' mr='1'><SiPowershell /></Box>
-                <Box mr='1'>PowerShell</Box>
-              </WrapItem>
-              <WrapItem>
-                <Box ml='3' mr='1'><VscTerminalCmd /></Box>
-                <Box mr='1'>CMD</Box>
-              </WrapItem>
-            </Wrap>
-          </Stack>
-          {/* Tech Skills Section */}
-          <Stack textAlign={{base:'center', md:'start'}}>
-          <Center fontSize='1.50rem' mt='2' mb='1' as='b' textTransform='uppercase' color='brandTheme.800'>Technical:</Center>
-          <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-            <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'start'}} mt={{base:'1', md:'0'}}>Operating System:</Text>
-            <Box ml={{base:'0', md:'3'}} mr='1'>Windows / MacOS / Linux / iOS</Box>
-          </Wrap>
-          <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-            <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'start'}} mt={{base:'1', md:'0'}}>Environment:</Text>
-            <VStack align='left' spacing={0}>
-              <Box ml={{base:'0', md:'3'}} mr='1'>Active Directory</Box>
-              <Box ml={{base:'0', md:'3'}} mr='1'>(SCCM) Microsoft System Center Configuration Manager</Box>
-              <Box ml={{base:'0', md:'3'}} mr='1'>(MDM) Mobile Device Management</Box>
+      <Stack textAlign='center'>
+        <Heading 
+          size='lg'
+          textTransform='uppercase'
+          as='u'
+          color='brandTheme.800'>
+            Development
+        </Heading>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Front-end:
+            </Heading>
+            <WrapItem>
+              <FaReact /><Text px='1'>React</Text>
+            </WrapItem>
+            <WrapItem>
+              <SiJavascript /><Text px='1'>JavaScript</Text>
+            </WrapItem>
+            <WrapItem>
+              <FaHtml5 /><Text px='1'>HTML</Text>
+            </WrapItem>
+            <WrapItem>
+              <FaCss3Alt /><Text px='1'>CSS</Text>
+            </WrapItem>
+            <WrapItem>
+              <FaSass /><Text px='1'>SASS</Text>
+            </WrapItem>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Back-end:
+            </Heading>
+            <WrapItem>
+              <FaNodeJs /><Text px='1'>Node.js</Text>
+            </WrapItem>
+            <WrapItem>
+              <SiExpress /><Text px='1'>Express.js</Text>
+            </WrapItem>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Version Control:
+            </Heading>
+            <WrapItem>
+              <FaGitAlt /><Text px='1'>Git</Text>
+            </WrapItem>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              API:
+            </Heading>
+            <WrapItem>
+              <LuFileJson2 /><Text px='1'>REST/JSON</Text>
+            </WrapItem>
+            <WrapItem>
+              <BsFiletypeXml /><Text px='1'>SOAP/XML</Text>
+            </WrapItem>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Database:
+            </Heading>
+            <WrapItem>
+              <GrMysql /><Text px='1'>MySQL</Text>
+            </WrapItem>
+            <WrapItem>
+              <SiMongodb /><Text px='1'>MongoDB</Text>
+            </WrapItem>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              ORM:
+            </Heading>
+            <WrapItem>
+              <SiSequelize /><Text px='1'>Sequelize</Text>
+            </WrapItem>
+            <WrapItem>
+              <SiMongoose /><Text px='1'>Mongoose</Text>
+            </WrapItem>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Hosting
+            </Heading>
+            <WrapItem>
+              <GrHeroku /><Text px='1'>Heroku</Text>
+            </WrapItem>
+            <WrapItem>
+              <SiNetlify /><Text px='1'>Netlify</Text>
+            </WrapItem>
+            <WrapItem>
+              <FaGithub /><Text px='1'>GitHub Pages</Text>
+            </WrapItem>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              CLI:
+            </Heading>
+            <WrapItem>
+              <SiGnubash /><Text px='1'>Bash</Text>
+            </WrapItem>
+            <WrapItem>
+              <SiPowershell /><Text px='1'>PowerShell</Text>
+            </WrapItem>
+            <WrapItem>
+              <VscTerminalCmd /><Text px='1'>CMD</Text>
+            </WrapItem>
+        </Wrap>
+
+        <Heading 
+          size='lg'
+          textTransform='uppercase' 
+          as='u'
+          color='brandTheme.800'>
+            Technical
+        </Heading>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Operating System:
+            </Heading>
+            <Text>Windows / MacOS / Linux / iOS</Text>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Environment Management:
+            </Heading>
+            <VStack alignItems={{ base:'inherit', md:'flex-start' }}>
+              <Text>Active Directory</Text>
+              <Text>(SCCM) Microsoft System Center Configuration Manager</Text>
+              <Text>(MDM)Mobile Device Management</Text>
             </VStack>
-          </Wrap>
-          <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-            <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'start'}} mt={{base:'1', md:'0'}}>Application & Server:</Text>
-            <VStack align='left' spacing={0}>
-              <Box ml={{base:'0', md:'3'}} mr='1'>Microsoft Server 2008 / 2012 (R2 editions)</Box>
-              <Box ml={{base:'0', md:'3'}} mr='1'>Microsoft 365</Box>
-              <Box ml={{base:'0', md:'3'}} mr='1'>Citrix XenApp / XenDesktop</Box>
-              <Box ml={{base:'0', md:'3'}} mr='1'>Cisco DNA Center / Prime</Box>
-              <Box ml={{base:'0', md:'3'}} mr='1'>SharePoint / InfoPath / Nintex</Box>
-              <Box ml={{base:'0', md:'3'}} mr='1'>Skype4Business / Zoom</Box>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Application & Server:
+            </Heading>
+            <VStack alignItems={{ base:'inherit', md:'flex-start' }}>
+              <Text>Microsoft Server 2008, 2012 (R2 editions)</Text>
+              <Text>Microsoft 365</Text>
+              <Text>Citrix XenApp / XenDesktop</Text>
+              <Text>Cisco DNA Center / Prime</Text>
+              <Text>SharePoint / InfoPath / Nintex</Text>
+              <Text>Skype4Business / Zoom</Text>
             </VStack>
-          </Wrap>
-          <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-            <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'start'}} mt={{base:'1', md:'0'}}>CLI:</Text>
-              <Box ml={{base:'0', md:'3'}} mr='1'>CMD / PowerShell / Cisco IOS / Junos OS</Box>
-          </Wrap>
-          <Wrap justify={{base:'center', md:'start'}} spacing='0'>
-            <Text as='b' color='brandTheme.800' w={{base:'100%', md:'auto'}} textAlign={{base:'center', md:'start'}} mt={{base:'1', md:'0'}}>Certifications:</Text>
-              <Box ml={{base:'0', md:'3'}} mr='1'>Net+ / A+ / MCP Infrastructure / Dell Warranty Certified</Box>
-          </Wrap>
-          </Stack>
-          <Card 
-          textAlign='center' 
-          variant='outline' 
-          p='3' 
-          m='2' 
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              CLI:
+            </Heading>
+            <Text>Cisco IOS / Junos OS / CMD / PowerShell</Text>
+        </Wrap>
+        <Wrap justify={{base:'center', md:'start'}}>
+          <Heading 
+            size='md' 
+            pr='1'
+            color='brandTheme.800'
+            width={{ base: '100%', md: 'inherit' }}
+            >
+              Certifications:
+            </Heading>
+            <Text>CompTIA Net+ / A+ / MCP Infrastructure / Dell Warranty Certified</Text>
+        </Wrap>
+        <Card
+          p='3'
           bg='rgba(60, 110, 113, 0.2)' 
           color='brandTheme.800'
           _dark={{ 
             bg:'rgba(85, 85, 85, 0.2)',
             color: 'brandTheme.600'
           }}
-          >
-            <Text as='b'>Resume available upon request, simply use the embedded <Link href={'#/contact'}>Contact</Link> form to reach me!</Text>
-          </Card>
-        </VStack>
-      </Center>
+        >
+          <Text as='b'>Resume available upon request, simply use the embedded <Link href={'#/contact'}>Contact</Link> form to reach me!</Text>
+        </Card>
+      </Stack>
     </Flex>     
   );
 }
