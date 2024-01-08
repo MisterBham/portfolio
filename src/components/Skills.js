@@ -12,8 +12,8 @@ function Skills() {
     <Flex 
       width='full'
       justifyContent='center'
-      py='1vw'
-      px='5vw'
+      px='5%'
+      py='1%'
       >
       <Stack textAlign='center'>
         <Heading 

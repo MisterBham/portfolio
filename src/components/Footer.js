@@ -9,10 +9,8 @@ export default function Footer() {
         alignItems="center"
         justify="space-between"
         px={{ base:'5vw', md:'2vw' }}
+        mt='auto'
         height='7.5vh'
-        left={0}
-        bottom={0}
-        position={"fixed"}
         bg='brandTheme.600'
         _dark={{
             bg: 'brandTheme.900'
