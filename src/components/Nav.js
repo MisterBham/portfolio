@@ -16,7 +16,6 @@ export default function App(){
         bg='brandTheme.600'
         w='full'
         px='2vw'
-        py='1vh'
         display='flex'
         justifyContent='space-between'
         shadow="md"
@@ -159,7 +158,7 @@ export default function App(){
         {/* Exists in both views */}
         <HStack>
           <Button
-            height='full'
+            size='lg'
             onClick={() => toggleColorMode()}
             >
             {colorMode === 'dark' ? <SunIcon color='orange.200'/> : <MoonIcon color='blue.600'/>}

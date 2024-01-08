@@ -23,6 +23,7 @@ export default function Homepage() {
     textAlign={{base:'center', md:'start'}}
     width='full'
     px='5%'
+    py='1%'
     >
       <Flex w='full' h='350px'>
         <Swiper

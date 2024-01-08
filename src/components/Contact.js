@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import {
   Button,
-  Flex,
   FormControl,
   FormLabel,
   FormHelperText,
   Input,
   Textarea,
   Link,
+  Container,
 } from "@chakra-ui/react";
 import emailjs from '@emailjs/browser';
 
@@ -26,11 +26,11 @@ export default function Contact() {
   };
   
   return (
-    <Flex 
-      width='full'
+    <Container 
+      maxW={{ base: '90%', md:'60%' }}
       justifyContent='center'
-      px='5vw'
-      pt='2vh'
+      px='5%'
+      py='1%'
       >
       <form 
         ref={form} 
@@ -49,15 +49,16 @@ export default function Contact() {
             />
 
           <FormLabel>Email address</FormLabel>
-          <Input 
-            name='email' 
-            type="email" 
-            autoComplete='email'
-            id='email'
-            focusBorderColor='teal'
-            border='1px solid silver'
-            mb='5'
-            />
+            <Input 
+              name='email' 
+              type='email'
+              autoComplete='email'
+              id='email'
+              focusBorderColor='teal'
+              border='1px solid silver'
+              mb='5'
+              />
+          
 
           <FormLabel>Message</FormLabel>
           <Textarea
@@ -98,6 +99,6 @@ export default function Contact() {
           </FormHelperText>
         </FormControl>
       </form>
-    </Flex>
+    </Container>
   );
 }
