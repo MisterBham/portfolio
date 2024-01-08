@@ -168,7 +168,9 @@ function Skills() {
           size='lg'
           textTransform='uppercase' 
           as='u'
-          color='brandTheme.800'>
+          color='brandTheme.800'
+          mt='3'
+          >
             Technical
         </Heading>
         <Wrap justify={{base:'center', md:'start'}}>
