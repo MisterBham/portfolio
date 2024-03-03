@@ -46,7 +46,6 @@ export default function Project(){
       description: 'PWA concept expressed as an offline text editor',
       stack: "JavaScript / ExpressJS",
       source: "https://github.com/MisterBham/PWA-texteditor",
-      app: "https://jate-texteditor-8463ed25bde3.herokuapp.com/",
     },
     {
       img: techblog,
@@ -55,7 +54,6 @@ export default function Project(){
       description: 'Blogging application paired with MySQL back-end',
       stack: "Handlebars / NodeJS / ExpressJS / MySQL / Sequelize",
       source: "https://github.com/MisterBham/tech-blog",
-      app: "https://technologyblog.herokuapp.com/",
     },
     {
       img: nosql,
@@ -89,7 +87,6 @@ export default function Project(){
       description: 'Note taking application',
       stack: "JavaScript / ExpressJS",
       source: "https://github.com/MisterBham/express-noteTaker",
-      app: "https://xpress-notetaker.herokuapp.com/",
     },
   ];
 
